@@ -1,0 +1,128 @@
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>    
+</head>
+<body onresize="check_book()" onload="check_book()">
+<div class="bookmark" id="bookmark"></div>
+<div class="book" id="journal">
+<div class="page" id="daily">
+<div class="days">
+
+<div class="day">
+  <div class="heavy">
+    <div>Monday (11/05/2018)</div><span class="text" contenteditable="true" style="text-align: right;"></span>
+  </div>
+  <div class="line">
+    <svg id="first" class="bullet" checked="0" xmlns="http://www.w3.org/2000/svg" version="1.0"  width="15" height="15" viewBox="0 0 15 15">
+      <path d="M4 4 h10 v10 h-10 v-10" class="dot" id="first.checkers" />
+      <path d="M5 7 L9 11 L16 1" class="dot" id="first.check" style="display: none; stroke-width: 1;"/>
+    </svg>
+    <span class="text" contenteditable="true">finish making this web app</span>
+  </div>   
+</div>
+
+<div class="day">
+  <div class="heavy">
+    <div>Tuesday (11/06/2018)</div><span class="text" contenteditable="true" style="text-align: right;"></span>
+  </div>
+  <div class="line">
+    <input type="checkbox"><span class="text" contenteditable="true">finish making this web app</span></input>
+    <div class="line">
+      <input type="checkbox"><span class="text" contenteditable="true">finish making this web app</span></input>
+    </div>  
+  </div>  
+</div>
+
+<div class="day">
+  <div class="heavy">
+    <div>Wednesday (11/07/2018)</div><span class="text" contenteditable="true" style="text-align: right;"></span>
+  </div>
+  <div class="line">
+    <input type="checkbox"><span class="text" contenteditable="true">finish making this web app</span></input>
+    <div class="line">
+      <input type="checkbox"><span class="text" contenteditable="true">finish making this web app</span></input>
+    </div>  
+  </div>  
+</div>
+
+<div class="day">
+  <div class="heavy">
+    <div id="date"></div><span class="text" contenteditable="true" style="text-align: right;"></span>
+  </div>
+  <div class="line">
+    <input type="checkbox"><span class="text" contenteditable="true">finish making this web app</span></input>
+    <div class="line">
+      <input type="checkbox"><span class="text" contenteditable="true">finish making this web app</span></input>
+    </div>  
+  </div>  
+</div>
+
+</div>
+</div>
+</div>
+<script>
+
+var days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+var months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+
+today =  new Date();
+y = today.getFullYear();
+m = today.getMonth() + 1;
+d = today.getDate();
+var day = days[ today.getDay() ];
+document.getElementById("date").innerHTML = day + " (" + m + "/" + d + "/" + y + ")";
+
+function check_book() {
+    var w = window.outerWidth;
+    var h = window.outerHeight;
+    if (w > 800) {
+      journal = document.getElementById("journal");
+      journal.style.borderLeft = "10px solid #123";
+      journal.style.borderTopLeftRadius = "20px";
+      journal.style.borderBottomLeftRadius = "20px";
+      daily = document.getElementById("daily");
+      daily.style.width = "50%";
+      daily.style.left  = "50%";
+      daily.style.right  = "20px";
+      bookmark = document.getElementById("bookmark");
+      bookmark.style.left = '' + parseInt(w/2-15);
+    }
+    else {
+      journal = document.getElementById("journal");
+      journal.style.borderLeft = "0";
+      journal.style.borderTopLeftRadius = "0";
+      journal.style.borderBottomLeftRadius = "0";
+      daily = document.getElementById("daily");
+      daily.style.width = "100%";
+      daily.style.left = "0";
+      daily.style.right  = "20px";
+      bookmark = document.getElementById("bookmark");
+      bookmark.style.left = "0";
+    }
+}
+
+
+
+$(document).ready(function(){
+  $( ".dot" ).click(function(event) {
+    var boss = event.target.id.split(".")[0]
+    check = document.getElementById(boss);
+    console.log('checking');
+    if (check.checked === 1) {
+      console.log('not checked')
+      check.checked = 0;
+      document.getElementById(check.id+".check").style.display = 'none';
+    }
+    else {
+      console.log('check');
+      check.checked = 1;
+      document.getElementById(check.id+".check").style.display = '';
+    }
+  });
+});
+
+</script>
+
+</body>
+</html>
