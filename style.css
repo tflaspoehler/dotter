@@ -20,7 +20,6 @@ body {
 }
 
 .book {
-  margin-left: 15px;
   padding-right: 20px;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -47,6 +46,7 @@ body {
   background-size: 20px 20px;
   padding: 0px;
   margin: 0px;
+  margin-left: 15px;
   height: 100%;
 }
 
@@ -76,57 +76,55 @@ body {
   box-shadow: inset 0 0 1px #f00;
 }
 
-
-.heavy {
-  margin: 0px 5px;
-  padding: 0px 0px;
+.title {
   background-image: url('heavy_dot.svg');
   background-repeat: repeat-x;
   background-position: left bottom;
   background-size: 20px 20px;
-  font-weight: bold;
-  height: auto;
-  min-height: 20px;
-  line-height: 20px; /* 4px +12px + 4px */
-  width: 100%;
-  display: flex;
-  vertical-align:middle; 
-  font-size: 14px;
-}
-
-.box {
-  padding: 0px;
-  margin: 0px;
-  font-size: 1px;
-  height: 10px;
-  width: 10px;
-  border: 1px solid black;
-}
-
-input[type="checkbox" i] {
-  margin: 0px 15px;
-  margin-top: 2px;
-  position:relative;
-  vertical-align:middle; 
-}
-input[type="checkbox" i]:hover {
-  background-color: red;
+  margin-left: 0px !important; 
 }
 
 .line {
   padding: 0px 0px;
   margin: 0px 20px;
+  margin-right: 0px;
   height: auto;
   min-height: 20px;
   line-height: 20px; /* 4px +12px + 4px */
   vertical-align:top; 
 }
 
-.text {
+.heavy {
+  margin: 0px 5px;
+  padding: 0px 0px;
+  font-weight: bold;
+  height: auto;
+  min-height: 20px;
+  line-height: 20px; /* 4px +12px + 4px */
+  vertical-align:middle; 
+  font-size: 14px;
+  float: left;
+}
+
+.bullet {
   background-color: none;
   padding: 0;
   border: 0;
   flex: 1;
+  float: left;
+  position: relative;
+  left: -20;
+  top: 0;
+}
+.text {
+  background-color: none;
+  padding: 0;
+  padding-left: -20px;
+  border: 0;
+  width: auto;
+  position: relative:
+  top: 0;
+  left: 0;
 }
 .text:hover {
   background-color: rgba(0, 0, 0, 0.15);
@@ -134,6 +132,7 @@ input[type="checkbox" i]:hover {
 .text:focus {
   background-color: rgba(0, 0, 0, 0.05);
 }
+
 
 .dot {
   stroke: #000; 
@@ -143,3 +142,21 @@ input[type="checkbox" i]:hover {
 .dot:hover {
   fill: rgba(0, 0, 0, 0.15);; 
 }
+
+.check {
+  stroke: rgb(45, 65, 205); 
+  stroke-width:2.0;
+  fill: none;
+  visibility: hidden;
+}
+
+.change, .plus, .ex  {
+  stroke:  rgba(0, 0, 0, 0.8);; 
+  stroke-width: 1.0;
+  fill: none;
+  visibility: hidden;
+}
+
+.dot:hover   + .change, .check:hover + .change, .bullet:hover .change,
+.dot:hover   + .plus,   .check:hover + .plus,   .bullet:hover .plus,
+.dot:hover   + .ex,     .check:hover + .ex,     .bullet:hover .ex {visibility: visible; fill: #fff;}
