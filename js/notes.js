@@ -18,10 +18,14 @@ var n_lines = 1
 				   
 function user_info() {
   document.getElementById("footer").innerHTML = 'getting data';
-    $.get("user.php", function(data, status){
-        var users = $.parseJSON(data);
-        document.getElementById("footer").innerHTML = "<b>" + users[0].user_login + "</b> (" + users[0].user_first + " " + users[0].user_last + ")";
-    });
+//    $.get("user.php", function(data, status){
+//        var users = $.parseJSON(data);
+	//
+  users = [{user_login: 'tflaspoehler',
+            user_first: 'Tim',
+            user_last: 'Flaspoehler'}]
+  document.getElementById("footer").innerHTML = "<b>" + users[0].user_login + "</b> (" + users[0].user_first + " " + users[0].user_last + ")";
+//    });
 }
 
 today =  new Date();
