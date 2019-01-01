@@ -1,76 +1,73 @@
 <html>
 <head>
   <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body onresize="check_book()" onload="check_book()">
+
+
 <div class="bookmark" id="bookmark"></div>
 <div class="book" id="journal">
+
+<div class="header" id="header">
+<!--  <svg class="colorbar" checked="0" starred="0" xmlns="http://www.w3.org/2000/svg" version="1.0" width="80" height="20"  viewBox="0 0 80 20">
+    <rect  x="2.5" y="5" width="15.0" height="15.0" class="blue color"  />
+    <rect x="22.5" y="5" width="15.0" height="15.0" class="green color"  />
+    <rect x="42.5" y="5" width="15.0" height="15.0" class="red color"  />
+    <rect x="62.5" y="5" width="15.0" height="15.0" class="black color"  />
+  </svg>
+-->
+  <div class="linings">
+    <div id="dotted" class="lining dotted" >dots</div>
+    <div id="gridded" class="lining gridded">grids</div>
+    <div id="lined" class="lining lined"  >lines</div>
+    <div id="empty" class="lining empty"  >empty</div>
+  </div>
+</div>
 <div class="page" id="daily">
-<div class="days">
+<div id="days" class="days grids">
 
 <div class="day">
+
   <div class="line title">
-    <div class="heavy" id="date"></div>
-    <div class="text" contenteditable="true" style="text-align: right; font-style: italic;">quote of the day</div>
+    <div class="heavy" id="date"contenteditable="true" ></div>
+    <div class="text" contenteditable="true" style="text-align: right; font-style: italic;"></div>
   </div>
+  
   <div class="line" id="first.line">
-      <svg id="first" class="bullet" checked="0" xmlns="http://www.w3.org/2000/svg" version="1.0"  width="50" height="20" viewBox="0 0 50 20">
-        <path d="M 24 4 h10 v10 h-10 v-10" class="dot" id="first.checkers" />
+      <svg id="first" class="bullet" checked="0" starred="0" xmlns="http://www.w3.org/2000/svg" version="1.0"  viewBox="0 0 55 20" style="position: relative; top: 0; left: -1.5em; z-index: 100;">
+        <rect x="2.5" y="0" width="10" height="20" class="ex option click_box" id="first.ex.box" />
+        <path d="M 5 6.5 l 5 5 M 10 6.5 l -5 5" class="ex option" id="first.ex" />
+        
+        <rect x="12.5" y="0" width="10" height="20" class="descriptor option click_box" id="first.descriptor.box" fill="rgba(0, 0, 0, 0)" stroke="rgba(0, 0, 0, 0)" stroke-width="1"/>
+        <path d="M 15 2.5 l 0.5 7 l 4 0 l 0.5 -7 l -5 0 m 2.5 12.5 c -1.8 0, -2.0 -1.0, -2.0 -2.0 c 0 -1.8, 1.0 -2.0, 2.0 -2.0 c 1.8 0, 2.0 1.0, 2.0 2.0 c 0 1.8, -1.0 2.0, -2.0 2.0" id="first.descriptor" class="descriptor option"/>
+        
+        <rect x="24" y="0" width="10" height="20" class="dot option click_box" id="first.checkers.box" fill="rgba(0, 0, 0, 0)" stroke="rgba(0, 0, 0, 0)" stroke-width="1"/>
+        <path d="M 24 4 h10 v10 h-10 v-10" class="dot option" id="first.checkers"/>
         <path d="M 25 7 L29 11 L35 1" class="check" id="first.check" />
-        <path d="M 40 14 C 44 10, 44 8, 40 4 m -2 4 l2 -4 l4 2" id="first.change" class="change" stroke="#333" stroke-width="0.4" fill="transparent"/>
-        <path d="M 19 9 l -5 0 M 16.5 6.5 l 0 5" class="plus" id="first.plus" />
-        <path d="M 5 6.5 l 5 5 M 10 6.5 l -5 5" class="ex" id="first.ex" />
+        <rect x="35.5" y="0" width="10" height="20" class="change option click_box" id="first.change.box" fill="rgba(0, 0, 0, 0)" stroke="rgba(0, 0, 0, 0)" stroke-width="1"/>
+        <path d="M 40 14 C 44 10, 44 8, 40 4 m -2 4 l2 -4 l4 2" id="first.change" class="change option" stroke="#333" stroke-width="0.4" fill="transparent"/>
+        <rect x="46.0" y="0" width="9" height="20" class="plus option click_box" id="first.plus.box" />
+        <path d="M 48.5 9 l 5 0 m -2.5 -2.5 l 0 5" class="plus option" id="first.plus" />
       </svg>
-    <div class="text" contenteditable="true">
+    <div class="text" contenteditable="true" style="position: relative; padding-left: 0; top: 0;">
       task 1
     </div>
-    
-      <div class="line">
-          <svg id="first" class="bullet" checked="0" xmlns="http://www.w3.org/2000/svg" version="1.0"  width="50" height="20" viewBox="0 0 50 20">
-            <path d="M 24 4 h10 v10 h-10 v-10" class="dot" id="first.checkers" />
-            <path d="M 25 7 L29 11 L35 1" class="check" id="first.check" />
-            <path d="M 40 14 C 44 10, 44 8, 40 4 m -2 4 l2 -4 l4 2" id="first.change" class="change" stroke="#333" stroke-width="0.4" fill="transparent"/>
-            <path d="M 19 9 l -5 0 M 16.5 6.5 l 0 5" class="plus" id="first.plus" />
-            <path d="M 5 6.5 l 5 5 M 10 6.5 l -5 5" class="ex" id="first.ex" />
-          </svg>
-        <div class="text" contenteditable="true">
-          subtask 1
-        </div>
-      </div>
-    
-      <div class="line">
-          <svg id="first" class="bullet" checked="0" xmlns="http://www.w3.org/2000/svg" version="1.0"  width="50" height="20" viewBox="0 0 50 20">
-            <path d="M 24 4 h10 v10 h-10 v-10" class="dot" id="first.checkers" />
-            <path d="M 25 7 L29 11 L35 1" class="check" id="first.check" />
-            <path d="M 40 14 C 44 10, 44 8, 40 4 m -2 4 l2 -4 l4 2" id="first.change" class="change" stroke="#333" stroke-width="0.4" fill="transparent"/>
-            <path d="M 19 9 l -5 0 M 16.5 6.5 l 0 5" class="plus" id="first.plus" />
-            <path d="M 5 6.5 l 5 5 M 10 6.5 l -5 5" class="ex" id="first.ex" />
-          </svg>
-        <div class="text" contenteditable="true">
-          subtask 2
-        </div>
-      </div>
-      <div class="line">
-          <svg id="first" class="bullet" checked="0" xmlns="http://www.w3.org/2000/svg" version="1.0"  width="50" height="20" viewBox="0 0 50 20">
-            <path d="M29 11.5 c -1.8 0, -2.4 -1.2, -2.4 -2.4 c 0 -1.8, 1.2 -2.4, 2.4 -2.4 c 1.8 0, 2.4 1.2, 2.4 2.4 c 0 1.8, -1.2 2.4, -2.4 2.4" class="dot" id="first.checkers" />
-            <path d="M 25 7 L29 11 L35 1" class="check" id="first.check" />
-            <path d="M 40 14 C 44 10, 44 8, 40 4 m -2 4 l2 -4 l4 2" id="first.change" class="change" stroke="#333" stroke-width="0.4" fill="transparent"/>
-            <path d="M 19 9 l -5 0 M 16.5 6.5 l 0 5" class="plus" id="first.plus" />
-            <path d="M 5 6.5 l 5 5 M 10 6.5 l -5 5" class="ex" id="first.ex" />
-          </svg>
-        <div class="text" contenteditable="true">
-          note 1
-        </div>
-      </div>
   </div>
+  
   <div class="line adder" id="adder_line"></div>
 </div>
 
 </div>
 </div>
+
+<div class="footer" id="footer">
+</div>
+
 </div>
 
 <script src="notes.js"></script>
 </body>
 </html>
+
