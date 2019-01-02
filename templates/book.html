@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+{% block book %}
+
+<div class="book" id="journal">
+
+<div class="header" id="header">
+<!--  <svg class="colorbar" checked="0" starred="0" xmlns="http://www.w3.org/2000/svg" version="1.0" width="80" height="20"  viewBox="0 0 80 20">
+    <rect  x="2.5" y="5" width="15.0" height="15.0" class="blue color"  />
+    <rect x="22.5" y="5" width="15.0" height="15.0" class="green color"  />
+    <rect x="42.5" y="5" width="15.0" height="15.0" class="red color"  />
+    <rect x="62.5" y="5" width="15.0" height="15.0" class="black color"  />
+  </svg>
+-->
+  <div class="linings">
+    <div id="dotted" class="lining dotted" >dots</div>
+    <div id="gridded" class="lining gridded">grids</div>
+    <div id="lined" class="lining lined"  >lines</div>
+    <div id="empty" class="lining empty"  >empty</div>
+  </div>
+</div>
+<div class="page" id="daily">
+<div id="days" class="days grids">
+
+{% block days %}
+{% endblock %}
+
+</div>
+</div>
+
+<div class="footer" id="footer">
+</div>
+
+</div>
+
+{% endblock %}

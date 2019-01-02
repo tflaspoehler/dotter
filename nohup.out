@@ -1,0 +1,43 @@
+[2019-01-02 00:02:24 +0000] [9933] [INFO] Starting gunicorn 19.9.0
+[2019-01-02 00:02:24 +0000] [9933] [INFO] Listening at: http://127.0.0.1:8000 (9933)
+[2019-01-02 00:02:24 +0000] [9933] [INFO] Using worker: sync
+[2019-01-02 00:02:24 +0000] [9937] [INFO] Booting worker with pid: 9937
+[2019-01-02 00:49:53 +0000] [9933] [INFO] Handling signal: term
+[2019-01-02 00:49:53 +0000] [9937] [INFO] Worker exiting (pid: 9937)
+[2019-01-02 00:49:53 +0000] [9933] [INFO] Shutting down: Master
+[2019-01-02 00:50:01 +0000] [10034] [INFO] Starting gunicorn 19.9.0
+[2019-01-02 00:50:01 +0000] [10034] [INFO] Listening at: http://127.0.0.1:8000 (10034)
+[2019-01-02 00:50:01 +0000] [10034] [INFO] Using worker: sync
+[2019-01-02 00:50:01 +0000] [10038] [INFO] Booting worker with pid: 10038
+[2019-01-02 00:50:23 +0000] [10034] [INFO] Handling signal: term
+[2019-01-02 00:50:23 +0000] [10038] [INFO] Worker exiting (pid: 10038)
+[2019-01-02 00:50:23 +0000] [10034] [INFO] Shutting down: Master
+[2019-01-02 00:50:28 +0000] [10069] [INFO] Starting gunicorn 19.9.0
+[2019-01-02 00:50:28 +0000] [10069] [INFO] Listening at: http://127.0.0.1:8000 (10069)
+[2019-01-02 00:50:28 +0000] [10069] [INFO] Using worker: sync
+[2019-01-02 00:50:28 +0000] [10073] [INFO] Booting worker with pid: 10073
+[2019-01-02 01:41:45 +0000] [10073] [INFO] Worker reloading: /home/ubuntu/git/dotter/app.py modified
+[2019-01-02 01:41:55 +0000] [10073] [INFO] Worker exiting (pid: 10073)
+[2019-01-02 01:41:55 +0000] [10172] [INFO] Booting worker with pid: 10172
+[2019-01-02 01:41:55 +0000] [10172] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 129, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 138, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ubuntu/git/dotter/app.py", line 17, in <module>
+    db = SQLALCHEMY(app)
+NameError: name 'SQLALCHEMY' is not defined
+[2019-01-02 01:41:55 +0000] [10172] [INFO] Worker exiting (pid: 10172)
+[2019-01-02 01:41:55 +0000] [10069] [INFO] Shutting down: Master
+[2019-01-02 01:41:55 +0000] [10069] [INFO] Reason: Worker failed to boot.
