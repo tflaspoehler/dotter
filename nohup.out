@@ -177,3 +177,136 @@ NameError: name 'SQLALCHEMY' is not defined
 [2019-01-02 09:07:24 +0000] [27277] [INFO] Booting worker with pid: 27277
 /home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask_sqlalchemy/__init__.py:794: FSADeprecationWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning.
   'SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and '
+[2019-01-02 19:24:54 +0000] [27277] [INFO] Worker reloading: /home/ubuntu/git/dotter/app.py modified
+[2019-01-02 19:24:58 +0000] [27277] [INFO] Worker exiting (pid: 27277)
+[2019-01-02 19:24:58 +0000] [28170] [INFO] Booting worker with pid: 28170
+/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask_sqlalchemy/__init__.py:794: FSADeprecationWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning.
+  'SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and '
+[2019-01-02 19:25:05 +0000] [27273] [INFO] Handling signal: term
+[2019-01-02 19:25:05 +0000] [28170] [INFO] Worker exiting (pid: 28170)
+[2019-01-02 19:25:05 +0000] [27273] [INFO] Shutting down: Master
+[2019-01-02 19:25:05 +0000] [28175] [INFO] Starting gunicorn 19.9.0
+[2019-01-02 19:25:05 +0000] [28175] [INFO] Listening at: http://127.0.0.1:8000 (28175)
+[2019-01-02 19:25:05 +0000] [28175] [INFO] Using worker: sync
+[2019-01-02 19:25:05 +0000] [28179] [INFO] Booting worker with pid: 28179
+/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask_sqlalchemy/__init__.py:794: FSADeprecationWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning.
+  'SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and '
+[2019-01-02 19:30:09 +0000] [28179] [INFO] Worker reloading: /home/ubuntu/git/dotter/app.py modified
+[2019-01-02 19:30:20 +0000] [28179] [INFO] Worker exiting (pid: 28179)
+[2019-01-02 19:30:20 +0000] [28226] [INFO] Booting worker with pid: 28226
+/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask_sqlalchemy/__init__.py:794: FSADeprecationWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning.
+  'SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and '
+[2019-01-02 19:30:33 +0000] [28226] [INFO] Worker reloading: /home/ubuntu/git/dotter/app.py modified
+[2019-01-02 19:30:35 +0000] [28226] [INFO] Worker exiting (pid: 28226)
+[2019-01-02 19:30:36 +0000] [28229] [INFO] Booting worker with pid: 28229
+/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask_sqlalchemy/__init__.py:794: FSADeprecationWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning.
+  'SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and '
+[2019-01-02 19:31:15 +0000] [28229] [INFO] Worker reloading: /home/ubuntu/git/dotter/app.py modified
+[2019-01-02 19:31:21 +0000] [28229] [INFO] Worker exiting (pid: 28229)
+[2019-01-02 19:31:21 +0000] [28232] [INFO] Booting worker with pid: 28232
+/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask_sqlalchemy/__init__.py:794: FSADeprecationWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning.
+  'SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and '
+[2019-01-02 19:32:04 +0000] [28232] [INFO] Worker reloading: /home/ubuntu/git/dotter/app.py modified
+[2019-01-02 19:32:05 +0000] [28232] [INFO] Worker exiting (pid: 28232)
+[2019-01-02 19:32:05 +0000] [28235] [INFO] Booting worker with pid: 28235
+/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask_sqlalchemy/__init__.py:794: FSADeprecationWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning.
+  'SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and '
+[2019-01-02 19:36:36 +0000] [28175] [INFO] Handling signal: term
+[2019-01-02 19:36:36 +0000] [28235] [INFO] Worker exiting (pid: 28235)
+[2019-01-02 19:36:36 +0000] [28175] [INFO] Shutting down: Master
+[2019-01-02 19:36:36 +0000] [28261] [INFO] Starting gunicorn 19.9.0
+[2019-01-02 19:36:36 +0000] [28261] [INFO] Listening at: http://127.0.0.1:8000 (28261)
+[2019-01-02 19:36:36 +0000] [28261] [INFO] Using worker: sync
+[2019-01-02 19:36:36 +0000] [28265] [INFO] Booting worker with pid: 28265
+/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask_sqlalchemy/__init__.py:794: FSADeprecationWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning.
+  'SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and '
+[2019-01-02 19:37:03 +0000] [28261] [INFO] Handling signal: term
+[2019-01-02 19:37:03 +0000] [28265] [INFO] Worker exiting (pid: 28265)
+[2019-01-02 19:37:03 +0000] [28261] [INFO] Shutting down: Master
+[2019-01-02 19:37:03 +0000] [28282] [INFO] Starting gunicorn 19.9.0
+[2019-01-02 19:37:03 +0000] [28282] [INFO] Listening at: http://127.0.0.1:8000 (28282)
+[2019-01-02 19:37:03 +0000] [28282] [INFO] Using worker: sync
+[2019-01-02 19:37:03 +0000] [28286] [INFO] Booting worker with pid: 28286
+/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask_sqlalchemy/__init__.py:794: FSADeprecationWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning.
+  'SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and '
+[2019-01-02 19:37:36 +0000] [28282] [INFO] Handling signal: term
+[2019-01-02 19:37:36 +0000] [28286] [INFO] Worker exiting (pid: 28286)
+[2019-01-02 19:37:36 +0000] [28282] [INFO] Shutting down: Master
+[2019-01-02 19:37:36 +0000] [28299] [INFO] Starting gunicorn 19.9.0
+[2019-01-02 19:37:36 +0000] [28299] [INFO] Listening at: http://127.0.0.1:8000 (28299)
+[2019-01-02 19:37:36 +0000] [28299] [INFO] Using worker: sync
+[2019-01-02 19:37:36 +0000] [28303] [INFO] Booting worker with pid: 28303
+/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask_sqlalchemy/__init__.py:794: FSADeprecationWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning.
+  'SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and '
+[2019-01-02 19:42:53 +0000] [28299] [INFO] Handling signal: term
+[2019-01-02 19:42:53 +0000] [28303] [INFO] Worker exiting (pid: 28303)
+[2019-01-02 19:42:53 +0000] [28299] [INFO] Shutting down: Master
+[2019-01-02 19:42:53 +0000] [28315] [INFO] Starting gunicorn 19.9.0
+[2019-01-02 19:42:53 +0000] [28315] [INFO] Listening at: http://127.0.0.1:8000 (28315)
+[2019-01-02 19:42:53 +0000] [28315] [INFO] Using worker: sync
+[2019-01-02 19:42:53 +0000] [28319] [INFO] Booting worker with pid: 28319
+/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask_sqlalchemy/__init__.py:794: FSADeprecationWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning.
+  'SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and '
+[2019-01-02 19:43:27 +0000] [28315] [INFO] Handling signal: term
+[2019-01-02 19:43:27 +0000] [28319] [INFO] Worker exiting (pid: 28319)
+[2019-01-02 19:43:27 +0000] [28315] [INFO] Shutting down: Master
+[2019-01-02 19:43:28 +0000] [28324] [INFO] Starting gunicorn 19.9.0
+[2019-01-02 19:43:28 +0000] [28324] [INFO] Listening at: http://127.0.0.1:8000 (28324)
+[2019-01-02 19:43:28 +0000] [28324] [INFO] Using worker: sync
+[2019-01-02 19:43:28 +0000] [28328] [INFO] Booting worker with pid: 28328
+/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask_sqlalchemy/__init__.py:794: FSADeprecationWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning.
+  'SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and '
+[2019-01-02 19:44:55 +0000] [28324] [INFO] Handling signal: term
+[2019-01-02 19:44:55 +0000] [28328] [INFO] Worker exiting (pid: 28328)
+[2019-01-02 19:44:55 +0000] [28324] [INFO] Shutting down: Master
+[2019-01-02 19:44:55 +0000] [28350] [INFO] Starting gunicorn 19.9.0
+[2019-01-02 19:44:55 +0000] [28350] [INFO] Listening at: http://127.0.0.1:8000 (28350)
+[2019-01-02 19:44:55 +0000] [28350] [INFO] Using worker: sync
+[2019-01-02 19:44:55 +0000] [28354] [INFO] Booting worker with pid: 28354
+/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask_sqlalchemy/__init__.py:794: FSADeprecationWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning.
+  'SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and '
+[2019-01-02 19:45:22 +0000] [28350] [INFO] Handling signal: term
+[2019-01-02 19:45:22 +0000] [28354] [INFO] Worker exiting (pid: 28354)
+[2019-01-02 19:45:22 +0000] [28350] [INFO] Shutting down: Master
+[2019-01-02 19:45:22 +0000] [28359] [INFO] Starting gunicorn 19.9.0
+[2019-01-02 19:45:22 +0000] [28359] [INFO] Listening at: http://127.0.0.1:8000 (28359)
+[2019-01-02 19:45:22 +0000] [28359] [INFO] Using worker: sync
+[2019-01-02 19:45:22 +0000] [28363] [INFO] Booting worker with pid: 28363
+/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask_sqlalchemy/__init__.py:794: FSADeprecationWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning.
+  'SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and '
+[2019-01-02 19:46:30 +0000] [28359] [INFO] Handling signal: term
+[2019-01-02 19:46:30 +0000] [28363] [INFO] Worker exiting (pid: 28363)
+[2019-01-02 19:46:30 +0000] [28359] [INFO] Shutting down: Master
+[2019-01-02 19:46:30 +0000] [28368] [INFO] Starting gunicorn 19.9.0
+[2019-01-02 19:46:30 +0000] [28368] [INFO] Listening at: http://127.0.0.1:8000 (28368)
+[2019-01-02 19:46:30 +0000] [28368] [INFO] Using worker: sync
+[2019-01-02 19:46:30 +0000] [28372] [INFO] Booting worker with pid: 28372
+/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask_sqlalchemy/__init__.py:794: FSADeprecationWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning.
+  'SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and '
+[2019-01-02 19:49:39 +0000] [28368] [INFO] Handling signal: term
+[2019-01-02 19:49:39 +0000] [28372] [INFO] Worker exiting (pid: 28372)
+[2019-01-02 19:49:39 +0000] [28368] [INFO] Shutting down: Master
+[2019-01-02 19:49:39 +0000] [28378] [INFO] Starting gunicorn 19.9.0
+[2019-01-02 19:49:39 +0000] [28378] [INFO] Listening at: http://127.0.0.1:8000 (28378)
+[2019-01-02 19:49:39 +0000] [28378] [INFO] Using worker: sync
+[2019-01-02 19:49:39 +0000] [28382] [INFO] Booting worker with pid: 28382
+/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask_sqlalchemy/__init__.py:794: FSADeprecationWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning.
+  'SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and '
+[2019-01-02 19:53:15 +0000] [28378] [INFO] Handling signal: term
+[2019-01-02 19:53:15 +0000] [28382] [INFO] Worker exiting (pid: 28382)
+[2019-01-02 19:53:15 +0000] [28378] [INFO] Shutting down: Master
+[2019-01-02 19:53:15 +0000] [28388] [INFO] Starting gunicorn 19.9.0
+[2019-01-02 19:53:15 +0000] [28388] [INFO] Listening at: http://127.0.0.1:8000 (28388)
+[2019-01-02 19:53:15 +0000] [28388] [INFO] Using worker: sync
+[2019-01-02 19:53:15 +0000] [28392] [INFO] Booting worker with pid: 28392
+/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask_sqlalchemy/__init__.py:794: FSADeprecationWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning.
+  'SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and '
+[2019-01-02 20:27:09 +0000] [28388] [INFO] Handling signal: term
+[2019-01-02 20:27:09 +0000] [28392] [INFO] Worker exiting (pid: 28392)
+[2019-01-02 20:27:09 +0000] [28388] [INFO] Shutting down: Master
+[2019-01-02 20:27:09 +0000] [28493] [INFO] Starting gunicorn 19.9.0
+[2019-01-02 20:27:09 +0000] [28493] [INFO] Listening at: http://127.0.0.1:8000 (28493)
+[2019-01-02 20:27:09 +0000] [28493] [INFO] Using worker: sync
+[2019-01-02 20:27:09 +0000] [28497] [INFO] Booting worker with pid: 28497
+/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask_sqlalchemy/__init__.py:794: FSADeprecationWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning.
+  'SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and '

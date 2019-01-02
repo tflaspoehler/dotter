@@ -48,23 +48,11 @@ class line(db.Model):
 @app.route('/')
 @app.route('/index.html')
 def index():
-    lines={1:dict(id=1,  shape=2, check=False, important=False, date="null", parent_id=0, text="each line has a range of options when hovered over",),
-           3:dict(id=3,  shape=2, check=False, important=False, date="null", parent_id=1, text="the 'x' deletes the lines and everything below",),
-           4:dict(id=4,  shape=2, check=False, important=True,  date="null", parent_id=1, text="the '!' adds an indicator to emphasize importance/whatever",),
-           5:dict(id=5,  shape=2, check=False, important=False, date="null", parent_id=1, text="the box/dot/circle indicate how the point should function",),
-           5:dict(id=5,  shape=2, check=True,  important=False, date="null", parent_id=1, text="the boxes can be checked and unchecked",),
-           6:dict(id=6,  shape=2, check=False, important=False, date="null", parent_id=1, text="the arrow changes the point between box/dot/circle",),
-           7:dict(id=7,  shape=2, check=False, important=False, date="null", parent_id=1, text="the '+' adds a child line to the current point",),
-           2:dict(id=2,  shape=2, check=False, important=False, date="null", parent_id=0, text="the different possible points are",),
-           8:dict(id=8,  shape=0, check=False, important=False, date="null", parent_id=2, text="a box which indicates a task to finish",),
-           9:dict(id=9,  shape=2, check=False, important=False, date="null", parent_id=2, text="a solid dot to indicate a note",),
-          10:dict(id=10, shape=1, check=False, important=False, date="null", parent_id=2, text="a circle to indicate a meeting",),
-          11:dict(id=11, shape=2, check=False, important=False, date="null", parent_id=0, text="settings are kept at the top and bottom of each page",)}
-    return render_template('index.html', lines=lines)
+    return render_template('index.html')
 
-@app.route("/lines")
+@app.route("/lines", methods=["GET", "POST"])
 def get_lines():
-    days = [dict(id=1, title='Bullet Journaling Introduction', text='''<br><br>Many people keep notebooks to take notes throughout the day with little methodology for keeping it organized. Bullet journaling (bulletjournaling.com) is a simple method for keeping track of your daily life. For years, I used a very basic version of this so I thought I'd make a simple site that follows my methodology. Below are the basics of what I used. I'm sure there are better versions of this out there (including through the main website), but I have never used any. This is at the end of the day more of a project to keep up to date with building web applications.
+    days = [dict(id=1, title='Bullet Journaling Introduction', text='''<br><br>Many people keep personal/work notebooks to jot down notes throughout the day with little methodology for keeping it organized. Bullet journaling (bulletjournaling.com) is a simple method for keeping track of your daily life. For years, I used a very basic version of this so I thought I'd make a simple site that follows my methodology. Below are the basics of what I used. I'm sure there are better versions of this out there (including through the main website), but I have never used any. This is at the end of the day more of a project to keep up to date with building web applications.
 <br><br>
 -Tim Flaspoehler''')]
     lines=[[dict(id=1,  shape=2, check=False, important=False, date="null", parent_id=0, text="each line has a range of options when hovered over",),
@@ -75,9 +63,9 @@ def get_lines():
             dict(id=7,  shape=2, check=False, important=False, date="null", parent_id=1, text="the arrow changes the point between box/dot/circle",),
             dict(id=8,  shape=2, check=False, important=False, date="null", parent_id=1, text="the '+' adds a child line to the current point",),
             dict(id=2,  shape=2, check=False, important=False, date="null", parent_id=0, text="the different possible points are",),
-            dict(id=9,  shape=0, check=False, important=False, date="null", parent_id=2, text="a box which indicates a task to finish",),
+            dict(id=9,  shape=0, check=False, important=False, date="null", parent_id=2, text="a box to indicate a task to finish",),
             dict(id=10, shape=2, check=False, important=False, date="null", parent_id=2, text="a solid dot to indicate a note",),
-            dict(id=11, shape=1, check=False, important=False, date="null", parent_id=2, text="a circle to indicate a meeting",),
+            dict(id=11, shape=1, check=False, important=False, date="null", parent_id=2, text="a circle to in   dicate a meeting",),
             dict(id=12, shape=2, check=False, important=False, date="null", parent_id=0, text="settings are kept at the top and bottom of each page",)]]
     return jsonify(days=days, lines=lines)
     

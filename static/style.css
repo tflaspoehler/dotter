@@ -286,3 +286,21 @@ body {
 .line:hover > .bullet .option,
 .dot:hover + .option {visibility: visible !important; rgba(0, 0, 0, 0.01)}
 
+input[type=checkbox]  {display: none;}
+label {
+  cursor: pointer;
+  font-weight: bold;
+  padding-left: 1em !important;
+  background-size: 1em 1em;
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-image: none;
+}
+.day:hover input[type=checkbox] + label {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" version="1.0"  viewBox="0 0 10 10"><path style="stroke-width: 2; stroke: %23333; fill: transparent;" d="M 2.5 7.5 L 5 5 L 7.5 7.5" /></svg>');
+}
+.day:hover input[type=checkbox]:checked + label {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" version="1.0"  viewBox="0 0 10 10"><path style="stroke-width: 2; stroke: %23333; fill: transparent;" d="M 2.5 5 L 5 7.5 L 7.5 5" /></svg>');
+}
+input[type=checkbox] ~ div {display: block;}
+input[type=checkbox]:checked ~ div {display: none;}

@@ -85,10 +85,11 @@ function check_book() {
 			for (var i = 0; i < data.days.length; ++i) {				
 				next += '<div class="day" id="day' + i +'">';
 				next += '  <div class="line title">';
-				next += '    <div class="heavy" id="date" contenteditable="false">' + data.days[i].title + '</div>';
+				next += '    <input type="checkbox" name="checkbox.day.' + i +'" id="checkbox.day.' + i +'" value="value">'
+                next += '    <label for="checkbox.day.' + i +'" class="heavy" contenteditable="false">' + data.days[i].title + '</label>'
 				next += '    <div class="text" contenteditable="true" style="text-align: right; font-style: italic;">' + data.days[i].text + '</div>';
 				next += add_lines(data.lines[i], base_id='day' + i +'-0');
-				next += '<div class="line adder" id="adder_line"></div>';
+				next += '    <div class="line adder" id="adder_line"></div>';
 				next += '  </div>';
 				next += '</div>';
 			}
