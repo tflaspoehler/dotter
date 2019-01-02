@@ -111,19 +111,19 @@ function add_lines(lines, base_id=0) {
 	  next += '      ';
 	  next += '      <rect x="12.5" y="0" width="10" height="20" class="descriptor option click_box" id="' + n_lines + '.descriptor.box" fill="rgba(0, 0, 0, 0)" stroke="rgba(0, 0, 0, 0)" stroke-width="1"/>';
       if (lines[line].important === true) {
-	      next += '      <path d="M 15 2.5 l 0.5 7 l 4 0 l 0.5 -7 l -5 0 m 2.5 12.5 c -1.8 0, -2.0 -1.0, -2.0 -2.0 c 0 -1.8, 1.0 -2.0, 2.0 -2.0 c 1.8 0, 2.0 1.0, 2.0 2.0 c 0 1.8, -1.0 2.0, -2.0 2.0" style="visibility: visible;" id="' + n_lines + '.descriptor" class="descriptor option" fill="#33f"/>';
+	      next += '      <path d="M 15 2.5 l 0.5 7 l 4 0 l 0.5 -7 l -5 0 m 2.5 12.5 c -1.8 0, -2.0 -1.0, -2.0 -2.0 c 0 -1.8, 1.0 -2.0, 2.0 -2.0 c 1.8 0, 2.0 1.0, 2.0 2.0 c 0 1.8, -1.0 2.0, -2.0 2.0" style="visibility: visible; fill: #33f;" id="' + n_lines + '.descriptor" class="descriptor option" />';
 	  }
 	  else {
-		  next += '      <path d="M 15 2.5 l 0.5 7 l 4 0 l 0.5 -7 l -5 0 m 2.5 12.5 c -1.8 0, -2.0 -1.0, -2.0 -2.0 c 0 -1.8, 1.0 -2.0, 2.0 -2.0 c 1.8 0, 2.0 1.0, 2.0 2.0 c 0 1.8, -1.0 2.0, -2.0 2.0" style="visibility: hidden;" id="' + n_lines + '.descriptor" class="descriptor option" fill="#33f"/>';
+		  next += '      <path d="M 15 2.5 l 0.5 7 l 4 0 l 0.5 -7 l -5 0 m 2.5 12.5 c -1.8 0, -2.0 -1.0, -2.0 -2.0 c 0 -1.8, 1.0 -2.0, 2.0 -2.0 c 1.8 0, 2.0 1.0, 2.0 2.0 c 0 1.8, -1.0 2.0, -2.0 2.0" style="visibility: hidden; fill: rgba(0, 0, 0, 0.3);" id="' + n_lines + '.descriptor" class="descriptor option" />';
 	      }
 	  next += '      ';
 	  next += '      <rect x="24" y="0" width="10" height="20" class="dot option click_box" id="' + n_lines + '.checkers.box" fill="rgba(0, 0, 0, 0)" stroke="rgba(0, 0, 0, 0)" stroke-width="1"/>';
 	  next += '      <path d="' + shapes[lines[line].shape] + '" fill="' + fills[lines[line].shape] + '" class="dot option" id="' + n_lines + '.checkers"/>';
 	  if (lines[line].check === true) {
-	      next += '      <path d="' + checks[lines[line].shape] + '" style="visibility: visible;" class="check" id="' + n_lines + '.check" />';
+	      next += '      <path d="' + checks[lines[line].shape] + '" style="visibility: visible; stroke: #33f; fill: ' + check_fills[lines[line].shape] + ';" class="check" id="' + n_lines + '.check" />';
 	  }
 	  else {
-	      next += '      <path d="' + checks[lines[line].shape] + '" style="visibility: hidden;" class="check" id="' + n_lines + '.check" />';
+	      next += '      <path d="' + checks[lines[line].shape] + '" style="visibility: hidden; stroke: #33f; fill: ' + check_fills[lines[line].shape] + ';" class="check" id="' + n_lines + '.check" />';
 	  }
 	  next += '      <rect x="35.5" y="0" width="10" height="20" class="change option click_box" id="' + n_lines + '.change.box" fill="rgba(0, 0, 0, 0)" stroke="rgba(0, 0, 0, 0)" stroke-width="1"/>';
 	  next += '      <path d="M 40 14 C 44 10, 44 8, 40 4 m -2 4 l2 -4 l4 2" id="' + n_lines + '.change" class="change option" stroke="#333" stroke-width="0.4" fill="transparent"/>';
@@ -175,11 +175,11 @@ function new_line(event) {
   next += '      <path d="M 5 6.5 l 5 5 M 10 6.5 l -5 5" class="ex option" id="' + n_lines + '.ex" />';
   next += '      ';
   next += '      <rect x="12.5" y="0" width="10" height="20" class="descriptor option click_box" id="' + n_lines + '.descriptor.box" fill="rgba(0, 0, 0, 0)" stroke="rgba(0, 0, 0, 0)" stroke-width="1"/>';
-  next += '      <path d="M 15 2.5 l 0.5 7 l 4 0 l 0.5 -7 l -5 0 m 2.5 12.5 c -1.8 0, -2.0 -1.0, -2.0 -2.0 c 0 -1.8, 1.0 -2.0, 2.0 -2.0 c 1.8 0, 2.0 1.0, 2.0 2.0 c 0 1.8, -1.0 2.0, -2.0 2.0" style="visibility: hidden;" id="' + n_lines + '.descriptor" class="descriptor option" fill="#33f"/>';
+  next += '      <path d="M 15 2.5 l 0.5 7 l 4 0 l 0.5 -7 l -5 0 m 2.5 12.5 c -1.8 0, -2.0 -1.0, -2.0 -2.0 c 0 -1.8, 1.0 -2.0, 2.0 -2.0 c 1.8 0, 2.0 1.0, 2.0 2.0 c 0 1.8, -1.0 2.0, -2.0 2.0" style="visibility: hidden; fill: rgba(0 ,0, 0, 0.3)" id="' + n_lines + '.descriptor" class="descriptor option" />';
   next += '      ';
   next += '      <rect x="24" y="0" width="10" height="20" class="dot option click_box" id="' + n_lines + '.checkers.box" fill="rgba(0, 0, 0, 0)" stroke="rgba(0, 0, 0, 0)" stroke-width="1"/>';
   next += '      <path d="' + shapes[0] + '" fill="' + fills[0] + '" class="dot option" id="' + n_lines + '.checkers"/>';
-  next += '      <path d="' + checks[0] + '" style="visibility: hidden;" class="check" id="' + n_lines + '.check" />';
+  next += '      <path d="' + checks[0] + '" style="visibility: hidden;" fill="rgba(0, 0, 0, 0.3)"  class="check" id="' + n_lines + '.check" />';
   next += '      <rect x="35.5" y="0" width="10" height="20" class="change option click_box" id="' + n_lines + '.change.box" fill="rgba(0, 0, 0, 0)" stroke="rgba(0, 0, 0, 0)" stroke-width="1"/>';
   next += '      <path d="M 40 14 C 44 10, 44 8, 40 4 m -2 4 l2 -4 l4 2" id="' + n_lines + '.change" class="change option" stroke="#333" stroke-width="0.4" fill="transparent"/>';
   next += '      <rect x="46.0" y="0" width="9" height="20" class="plus option click_box" id="' + n_lines + '.plus.box" />';
@@ -215,11 +215,11 @@ function add_line(event) {
   next += '      <path d="M 5 6.5 l 5 5 M 10 6.5 l -5 5" class="ex option" id="' + boss + '.ex" />';
   next += '      ';
   next += '      <rect x="12.5" y="0" width="10" height="20" class="descriptor option click_box" id="' + boss + '.descriptor.box" fill="rgba(0, 0, 0, 0)" stroke="rgba(0, 0, 0, 0)" stroke-width="1"/>';
-  next += '      <path d="M 15 2.5 l 0.5 7 l 4 0 l 0.5 -7 l -5 0 m 2.5 12.5 c -1.8 0, -2.0 -1.0, -2.0 -2.0 c 0 -1.8, 1.0 -2.0, 2.0 -2.0 c 1.8 0, 2.0 1.0, 2.0 2.0 c 0 1.8, -1.0 2.0, -2.0 2.0" style="visibility: hidden;" id="' + boss + '.descriptor" class="descriptor option" fill="#33f"/>';
+  next += '      <path d="M 15 2.5 l 0.5 7 l 4 0 l 0.5 -7 l -5 0 m 2.5 12.5 c -1.8 0, -2.0 -1.0, -2.0 -2.0 c 0 -1.8, 1.0 -2.0, 2.0 -2.0 c 1.8 0, 2.0 1.0, 2.0 2.0 c 0 1.8, -1.0 2.0, -2.0 2.0" style="visibility: hidden; fill: rgba(0, 0, 0, 0.3)" id="' + boss + '.descriptor" class="descriptor option"/>';
   next += '      ';
   next += '      <rect x="24" y="0" width="10" height="20" class="dot option click_box" id="' + boss + '.checkers.box" fill="rgba(0, 0, 0, 0)" stroke="rgba(0, 0, 0, 0)" stroke-width="1"/>';
   next += '      <path d="' + shapes[0] + '" fill="' + fills[0] + '" class="dot option" id="' + boss + '.checkers"/>';
-  next += '      <path d="' + checks[0] + '" style="visibility: hidden;" class="check" id="' + boss + '.check" />';
+  next += '      <path d="' + checks[0] + '" style="visibility: hidden;" fill="rgba(0, 0, 0, 0.3)" class="check" id="' + boss + '.check" />';
   next += '      <rect x="35.5" y="0" width="10" height="20" class="change option click_box" id="' + boss + '.change.box" fill="rgba(0, 0, 0, 0)" stroke="rgba(0, 0, 0, 0)" stroke-width="1"/>';
   next += '      <path d="M 40 14 C 44 10, 44 8, 40 4 m -2 4 l2 -4 l4 2" id="' + boss + '.change" class="change option" stroke="#333" stroke-width="0.4" fill="transparent"/>';
   next += '      <rect x="46.0" y="0" width="9" height="20" class="plus option click_box" id="' + boss + '.plus.box" />';
@@ -296,4 +296,5 @@ function bullet_change(event) {
   box.style.fill = fills[i];
   check.setAttribute('d', checks[i]);
   check.style.fill = check_fills[i];
+  check.style.stroke = check_fills[i];
 }

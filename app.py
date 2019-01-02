@@ -71,14 +71,14 @@ def get_lines():
             dict(id=3,  shape=2, check=False, important=False, date="null", parent_id=1, text="the 'x' deletes the lines and everything below",),
             dict(id=4,  shape=2, check=False, important=True,  date="null", parent_id=1, text="the '!' adds an indicator to emphasize importance/whatever",),
             dict(id=5,  shape=2, check=False, important=False, date="null", parent_id=1, text="the box/dot/circle indicate how the point should function",),
-            dict(id=5,  shape=2, check=True,  important=False, date="null", parent_id=1, text="the boxes can be checked and unchecked",),
-            dict(id=6,  shape=2, check=False, important=False, date="null", parent_id=1, text="the arrow changes the point between box/dot/circle",),
-            dict(id=7,  shape=2, check=False, important=False, date="null", parent_id=1, text="the '+' adds a child line to the current point",),
+            dict(id=6,  shape=2, check=True,  important=False, date="null", parent_id=1, text="the boxes can be checked and unchecked",),
+            dict(id=7,  shape=2, check=False, important=False, date="null", parent_id=1, text="the arrow changes the point between box/dot/circle",),
+            dict(id=8,  shape=2, check=False, important=False, date="null", parent_id=1, text="the '+' adds a child line to the current point",),
             dict(id=2,  shape=2, check=False, important=False, date="null", parent_id=0, text="the different possible points are",),
-            dict(id=8,  shape=0, check=False, important=False, date="null", parent_id=2, text="a box which indicates a task to finish",),
-            dict(id=9,  shape=2, check=False, important=False, date="null", parent_id=2, text="a solid dot to indicate a note",),
-            dict(id=10, shape=1, check=False, important=False, date="null", parent_id=2, text="a circle to indicate a meeting",),
-            dict(id=11, shape=2, check=False, important=False, date="null", parent_id=0, text="settings are kept at the top and bottom of each page",)]]
+            dict(id=9,  shape=0, check=False, important=False, date="null", parent_id=2, text="a box which indicates a task to finish",),
+            dict(id=10, shape=2, check=False, important=False, date="null", parent_id=2, text="a solid dot to indicate a note",),
+            dict(id=11, shape=1, check=False, important=False, date="null", parent_id=2, text="a circle to indicate a meeting",),
+            dict(id=12, shape=2, check=False, important=False, date="null", parent_id=0, text="settings are kept at the top and bottom of each page",)]]
     return jsonify(days=days, lines=lines)
     
 if __name__ == '__main__':
