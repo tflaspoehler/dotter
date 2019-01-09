@@ -40,6 +40,7 @@ function get_date() {
 function check_book() {
     var w = window.outerWidth;
     var h = window.outerHeight;
+	console.log('window resized');
     if (w < 0) {
       journal = document.getElementById("journal");
       journal.style.borderLeft = "10px solid #123";
@@ -64,11 +65,9 @@ function check_book() {
       bookmark = document.getElementById("bookmark");
       bookmark.style.left = "0";
     }
-    /// fetch('lines')
-    ///   .then(function(lines) {
-    /// 	console.log('ello gov');
-    /// 	console.log(lines);
-    ///   });
+}
+
+function add_book() {
 	$.getJSON(
 		"lines",
 		function(data) {
@@ -82,11 +81,11 @@ function check_book() {
 			data.days.push({id:1, title:date, text:'&nbsp;'});
 			data.lines.push({});
 			var next = ''
-			for (var i = 0; i < data.days.length; ++i) {				
+			for (var i = 0; i < data.days.length; ++i) {	
 				next += '<div class="day" id="day' + i +'">';
 				next += '  <div class="line title">';
 				next += '    <input type="checkbox" name="checkbox.day.' + i +'" id="checkbox.day.' + i +'" value="value">'
-                next += '    <label for="checkbox.day.' + i +'" class="heavy" contenteditable="false">' + data.days[i].title + '</label>'
+                next += '    <label style="position: relative; z-index: 100;" for="checkbox.day.' + i +'" class="heavy" contenteditable="false">' + data.days[i].title + '</label>'
 				next += '    <div class="text" contenteditable="true" style="text-align: right; font-style: italic;">' + data.days[i].text + '</div>';
 				next += add_lines(data.lines[i], base_id='day' + i +'-0');
 				next += '    <div class="line adder" id="adder_line"></div>';
@@ -102,11 +101,14 @@ function check_book() {
 function add_lines(lines, base_id=0) {
   var id = parseInt(base_id.split('-').slice(-1)[0])
   var next = '';
+  
   for (var line in lines) {
 	  n_lines = base_id + '-' + lines[line].id;
 	  if (lines[line].parent_id === id) {
+	  var checked = 0;
+	  if (lines[line].check === true) {checked = 1;}
 	  next += '<div class="line" id="' + n_lines + '.line">';
-	  next += '    <svg id="' + n_lines + '" class="bullet" checked="0" xmlns="http://www.w3.org/2000/svg" version="1.0"  viewBox="0 0 55 20" style="position: relative; top: 0; left: -1.5em; z-index: 100;">';
+	  next += '    <svg id="' + n_lines + '" class="bullet" checked="' + checked + '" xmlns="http://www.w3.org/2000/svg" version="1.0"  viewBox="0 0 55 20" style="position: relative; top: 0; left: -1.5em; z-index: 100;">';
 	  next += '      <rect x="2.5" y="0" width="10" height="20" class="ex option click_box" id="' + n_lines + '.ex.box" />';
 	  next += '      <path d="M 5 6.5 l 5 5 M 10 6.5 l -5 5" class="ex option" id="' + n_lines + '.ex" />';
 	  next += '      ';
@@ -158,9 +160,11 @@ function add_listeners() {
   $( ".lining" ).unbind().click(change_lines);
 }
 
+window.onload = add_book();
 $(document).ready(add_listeners);
-
 $(document).ready(user_info);
+
+$(window).on('resize', check_book());
 
 $("body").on('DOMSubtreeModified', ".line", add_listeners);
 
@@ -186,7 +190,7 @@ function new_line(event) {
   next += '      <rect x="46.0" y="0" width="9" height="20" class="plus option click_box" id="' + n_lines + '.plus.box" />';
   next += '      <path d="M 48.5 9 l 5 0 m -2.5 -2.5 l 0 5" class="plus option" id="' + n_lines + '.plus" />';
   next += '    </svg>';
-  next += '  <div class="text" contenteditable="true" style="position: relative; padding-left: 0; top: 0;">&nbsp;';
+  next += '  <div class="text" contenteditable="true" style="position: relative; padding-left: 0; top: 0;"><br>';
   next += '  </div>';
   next += '</div>';
   
@@ -226,7 +230,7 @@ function add_line(event) {
   next += '      <rect x="46.0" y="0" width="9" height="20" class="plus option click_box" id="' + boss + '.plus.box" />';
   next += '      <path d="M 48.5 9 l 5 0 m -2.5 -2.5 l 0 5" class="plus option" id="' + boss + '.plus" />';
   next += '    </svg>';
-  next += '  <div class="text" contenteditable="true" style="position: relative; padding-left: 0; top: 0;">&nbsp;';
+  next += '  <div class="text" contenteditable="true" style="position: relative; padding-left: 0; top: 0;"><br>';
   next += '  </div>';
   next += '</div>';
   line.innerHTML = line.innerHTML + next;
@@ -247,17 +251,18 @@ function change_lines(event) {
 
 function box_click(event) {
   event.stopPropagation();
-  var boss = event.target.id.split(".")[0]
+  var boss = event.target.id.replace(".checkers","").replace(".box","").replace(".check","")
+  console.log('boss', boss);
   check = document.getElementById(boss);
-  console.log('checking');
-  if (check.checked === 1) {
+  console.log('checking', parseInt(check.getAttribute('checked')));
+  if (check.getAttribute('checked') === '1') {
     console.log('not checked')
-    check.checked = 0;
+    check.setAttribute('checked', '0');
     document.getElementById(check.id+".check").style.visibility = 'hidden';
   }
   else {
     console.log('check');
-    check.checked = 1;
+    check.setAttribute('checked', '1');
     document.getElementById(check.id+".check").style.visibility = 'visible';
   }
 }

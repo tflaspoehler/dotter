@@ -15,7 +15,7 @@ body {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  font-size: 125%;
+  font-size: 100%;
   
 }
 
@@ -88,12 +88,12 @@ body {
 
 .lining {
   font-size: 0.75em;
-  height: 0.75em;
-  line-height: 0.75em;
   float: left;
   cursor: pointer;
   padding: 0 1em;
-  padding-top: 0.25em;
+  padding-top: 0.125em;
+  background-size: 0.5em 0.5em;
+  background-repeat: repeat;
 }
 
 .lining:hover {
@@ -102,20 +102,15 @@ body {
 
 .dotted {
   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" version="1.0"  width="10" height="10" viewBox="0 0 10 10">	<circle style="fill: %23ccc" cx="5" cy="5" r="2.0"/></svg>');
-  background-size: 0.4em 0.4em;
-  background-repeat: repeat;
+
 }
 
 .gridded {
   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" version="1.0"  width="10" height="10" viewBox="0 0 10 10">     <path d="M 0 5 l 10 0 M 5 0 l 0 10" style="stroke: %23ccc; stroke-width: 2.0;" /></svg>');
-  background-size: 0.4em 0.4em;
-  background-repeat: repeat;
 }
 
 .lined {
   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" version="1.0"  width="10" height="10" viewBox="0 0 10 10">	<path d="M 0 5 l 10 0" style="stroke: %23ccc; stroke-width: 2.0;" /></svg>');
-  background-size: 0.4em 0.4em;
-  background-repeat: repeat;
 }
 
 .page {
@@ -156,12 +151,12 @@ body {
 }
 
 .lines {
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" version="1.0"  width="10" height="10" viewBox="0 0 10 10"><path d="M 0 8.5 l 10.0 0" style="stroke: %23aaa; stroke-width: 0.1;" /></svg>');
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" version="1.0"  width="10" height="10" viewBox="0 0 10 10"><path d="M 0 8.5 l 10.0 0" style="stroke: %23aaa; stroke-width: 0.15;" /></svg>');
   background-size: 1.5em 1.5em;
 }
 
 .grids {
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" version="1.0"  width="10" height="10" viewBox="0 0 10 10"><path d="M 0 8.5 l 10.0 0 M 9.5 0 l 0 10.0 " style="stroke: %23aaa; stroke-width: 0.1;" /></svg>');
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" version="1.0"  width="10" height="10" viewBox="0 0 10 10"><path d="M 0 8.5 l 10.0 0 M 9.5 0 l 0 10.0 " style="stroke: %23aaa; stroke-width: 0.15;" /></svg>');
   background-size: 1.5em 1.5em;
 }
 
@@ -239,7 +234,7 @@ body {
   padding-right: 0.3em;
   border: 0;
   width: auto;
-  position: relative:
+  position: relative;
   top: 0;
   left: 0;
 }
