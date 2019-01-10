@@ -56,7 +56,7 @@ def get_lines():
     days = [dict(id=1, title='Bullet Journaling Introduction', text='''<br><br>
 This is a very basic web application I've been tinkering with that mimics bulletjournaling (<a href="https://bulletjournal.com/">bulletjournal.com</a>). Many people keep personal/work notebooks to jot down notes throughout the day with little methodology for keeping it organized. bulletjournaling (<a href="https://bulletjournal.com/">bulletjournal.com</a>) is a simple method for keeping track of your daily life. For years, I used a very basic version of this so I thought I'd make a simple web app that follows my methodology. I'm sure there are better versions of this out there (including through the main website), but this is simply what I use. At the end of the day, this is more of a project to keep up to date with building user-friendly, useful web apps.
 <br><br>
--Tim Flaspoehler'''),dict(id=2, title='Implementation TODO List', text='Here I am demonstrating the application by tracking its own development progress.<br>Unfinished tasks (indicated by a checkbox) should be passed to each new day until finished. ')]
+-Tim Flaspoehler'''),dict(id=2, title='Implementation TODO List', text='Here I am demonstrating the application by tracking its own development progress. Unfinished tasks (indicated by a checkbox) should be passed to each new day until finished. ')]
     lines=[[dict(id=3,  shape=2, check=False, important=False, date="null", parent_id=1, text="the 'x' deletes the lines and everything below",),
             dict(id=4,  shape=2, check=False, important=True,  date="null", parent_id=1, text="the '!' adds an indicator to emphasize importance/whatever",),
             dict(id=5,  shape=2, check=False, important=False, date="null", parent_id=1, text="the box/dot/circle indicate how the point should function",),
@@ -95,6 +95,11 @@ This is a very basic web application I've been tinkering with that mimics bullet
                   dict(id=25, shape=2, check=False, important=False, date="null", parent_id=23, text="dotter.app",),
                   dict(id=24, shape=0, check=True, important=False, date="null", parent_id=22, text="make ssl certs work in nginx",),])
     return jsonify(days=days, lines=lines)
+
+
+@app.route('/landing.html')
+def landing():
+    return render_template('landing.html')
     
 if __name__ == '__main__':
     app.run(debug=True)

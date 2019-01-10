@@ -90,7 +90,7 @@ function add_book() {
 				next += add_lines(data.lines[i], base_id='day' + i +'-0');
 				next += '    <div class="line adder" id="adder_line"></div>';
 				next += '  </div>';
-				next += '</div>';
+				next += '<br></div>';
 			}
 		    document.getElementById("days").innerHTML = next;
 		    $(document).ready(add_listeners);
@@ -158,6 +158,7 @@ function add_listeners() {
   $( ".adder" ).unbind().click(new_line);
   $( ".descriptor" ).unbind().click(star_line);
   $( ".lining" ).unbind().click(change_lines);
+  $( ".zoom" ).unbind().click(zoom);
 }
 
 window.onload = add_book();
@@ -303,4 +304,27 @@ function bullet_change(event) {
   check.setAttribute('d', checks[i]);
   check.style.fill = check_fills[i];
   check.style.stroke = check_fills[i];
+}
+
+function zoom(event) {
+  event.stopPropagation();
+  var target = event.target.id
+  console.log('zooming', target,);
+  if (target === 'in') {
+	   var size = parseInt($('html').css('font-size').split('%')[0].split('em')[0].split('px')[0])*1.1;
+  }
+  else {
+	   var size = parseInt($('html').css('font-size').split('%')[0].split('em')[0].split('px')[0])/1.1;
+  }
+  console.log(size);
+  if ($('html').css('font-size').includes('px')) {
+	  $('html').css('font-size', size+'px')
+  }
+  else if ($('html').css('font-size').includes('em')) {
+	  $('html').css('font-size', size+'em')
+  }
+  else if ($('html').css('font-size').includes('%')) {
+	  $('html').css('font-size', size+'%')
+  }
+  // $('html').css('font-size', newFontSize)
 }

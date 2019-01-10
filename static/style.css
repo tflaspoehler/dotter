@@ -3,6 +3,7 @@ html {
   margin: 0;
   height: 100%;
   overflow: hidden
+  font-size: 100%;
 }
 body {
   font-family: Open Sans; 
@@ -15,8 +16,52 @@ body {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  font-size: 100%;
   
+}
+
+.landing {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: scroll;
+}
+
+.library {
+  width: 100%;
+  padding: 2em;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  box-shadow: 0 0.2em 0.4em 0 rgba(0, 0, 0, 0.2), 0 0.5em 1.5em 0 rgba(0, 0, 0, 0.19);
+  display: -webkit-flex; /* Safari */
+  -webkit-flex-wrap: wrap; /* Safari 6.1+ */
+  display: flex;  
+  flex-wrap: wrap;
+  margin-top: 0;
+  margin-bottom: auto;
+}
+
+.notebook {
+  height: 9em;
+  width: 6.5em;
+  background-color: #123;
+  background-image: linear-gradient(to bottom right, #223, #666);
+  border-top-right-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
+  border-top-left-radius: 0.1em;
+  border-bottom-left-radius: 0.1em;
+  border: 0px;
+  box-shadow: 0 0.1em 0.3em 0 rgba(0, 0, 0, 0.5);
+  margin: 0em 2em;
+}
+
+.card {
+  cursor: pointer;
+  text-align: center;
+  display: table;
+  margin; 1em 1em;
 }
 
 .book {
@@ -32,6 +77,23 @@ body {
   left: 0;
   right: 0;
   box-shadow: 0 0.2em 0.4em 0 rgba(0, 0, 0, 0.2), 0 0.5em 1.5em 0 rgba(0, 0, 0, 0.19);
+}
+
+.login {
+  text-align: right;
+  margin-top: 2em;
+  page-break-before: always;
+}
+
+.login input {
+  display: inline-block !important;
+}
+.login button {
+  padding: 0.5em;
+  text-align: center;
+}
+.login label {
+  font-weight: normal;
 }
 
 .header {
@@ -86,6 +148,21 @@ body {
   top: 0.25em;
 }
 
+.title {
+  float: left;
+  padding: 0 1em;
+  padding-top: 0.125em;
+  width: 100%;
+}
+
+.zoom {
+  font-size: 0.75em;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+
 .lining {
   font-size: 0.75em;
   float: left;
@@ -121,12 +198,11 @@ body {
   position: relative;
 }
 .days {
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" version="1.0"  width="10" height="10" viewBox="0 0 10 10">	<circle style="fill: %23aaa" cx="9.5" cy="8.5" r=".35"/></svg>');
-  background-size: 1.5em 1.5em;
   padding: 0;
   margin: 0;
   margin-left: 1.2em;
   min-height: 100%;
+  overflow: auto;
 }
 
 .bookmark {
@@ -141,6 +217,20 @@ body {
   top:0;
   left:0;
   right:0;
+  z-index: 10;
+  box-shadow: 0 0.2em 0.4em 0 rgba(0, 0, 0, 0.2), 0 0.5em 1.5em 0 rgba(0, 0, 0, 0.19);
+}
+.keeper {
+  background-color: #246;
+  background-image: repeating-linear-gradient(rgba(255, 255 ,200), yellow 10px, green 100%);
+  background-repeat: no-repeat;
+  background-position: top;
+  width: 5%;
+  position:relative;
+  height:100%;
+  bottom:0;
+  top:0;
+  left:80%;
   z-index: 10;
   box-shadow: 0 0.2em 0.4em 0 rgba(0, 0, 0, 0.2), 0 0.5em 1.5em 0 rgba(0, 0, 0, 0.19);
 }

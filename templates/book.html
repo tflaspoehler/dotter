@@ -1,6 +1,11 @@
 {% extends "layout.html" %}
 {% block book %}
 
+<div class="bookmark" id="bookmark">
+    <div id="in" class="zoom">(+)</div>
+    <div id="out" class="zoom">(-)</div>
+</div>
+
 <div class="book" id="journal">
 
 <div class="header" id="header">
@@ -12,6 +17,7 @@
   </svg>
 -->
   <div class="linings">
+    <!-- <div class="title lining"><b>dotter</b>.app</div> --->
     <div id="dotted" class="lining dotted" >dots</div>
     <div id="gridded" class="lining gridded">grids</div>
     <div id="lined" class="lining lined"  >lines</div>
