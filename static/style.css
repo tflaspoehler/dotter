@@ -20,26 +20,26 @@ body {
 }
 
 .landing {
+  padding: 1em;
   height: 100%;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: scroll;
+  background-size: 1em 1em;
 }
 
 .library {
   width: 100%;
-  padding: 2em;
+  margin: 2em;
   align-items: center;
   justify-content: center;
-  background-color: #fff;
-  box-shadow: 0 0.2em 0.4em 0 rgba(0, 0, 0, 0.2), 0 0.5em 1.5em 0 rgba(0, 0, 0, 0.19);
   display: -webkit-flex; /* Safari */
   -webkit-flex-wrap: wrap; /* Safari 6.1+ */
   display: flex;  
   flex-wrap: wrap;
-  margin-top: 0;
+  margin-top: auto;
   margin-bottom: auto;
 }
 
@@ -67,7 +67,7 @@ body {
 .book {
   border-top-right-radius: 1.5em;
   border-bottom-right-radius: 1.5em;
-  border: 0.75em solid #123;
+  border: 0.75em solid #223;
   border-left: 0px;
   padding: 1.2em 0px;
   position:absolute;
@@ -179,7 +179,6 @@ body {
 
 .dotted {
   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" version="1.0"  width="10" height="10" viewBox="0 0 10 10">	<circle style="fill: %23ccc" cx="5" cy="5" r="2.0"/></svg>');
-
 }
 
 .gridded {
@@ -382,10 +381,10 @@ label {
   background-image: none;
 }
 .day:hover input[type=checkbox] + label {
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" version="1.0"  viewBox="0 0 10 10"><path style="stroke-width: 2; stroke: %23333; fill: transparent;" d="M 2.5 7.5 L 5 5 L 7.5 7.5" /></svg>');
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" version="1.0"  viewBox="0 0 10 10"><path style="stroke-width: 2; stroke: %23000; fill: transparent;" d="M 2.5 7.5 L 5 5 L 7.5 7.5" /></svg>');
 }
 .day:hover input[type=checkbox]:checked + label {
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" version="1.0"  viewBox="0 0 10 10"><path style="stroke-width: 2; stroke: %23333; fill: transparent;" d="M 2.5 5 L 5 7.5 L 7.5 5" /></svg>');
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" version="1.0"  viewBox="0 0 10 10"><path style="stroke-width: 2; stroke: %23000; fill: transparent;" d="M 2.5 5 L 5 7.5 L 7.5 5" /></svg>');
 }
 input[type=checkbox] ~ div {display: block;}
 input[type=checkbox]:checked ~ div {display: none;}

@@ -959,3 +959,491 @@ ImportError: No module named flask_sqlalchemy
 [2019-01-10 01:21:27 +0000] [26223] [INFO] Booting worker with pid: 26223
 /home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask_sqlalchemy/__init__.py:794: FSADeprecationWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning.
   'SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and '
+[2019-01-10 02:18:16 +0000] [26223] [INFO] Worker reloading: /home/ubuntu/git/dotter/app.py modified
+[2019-01-10 02:18:17 +0000] [26223] [INFO] Worker exiting (pid: 26223)
+[2019-01-10 02:18:17 +0000] [26494] [INFO] Booting worker with pid: 26494
+/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask_sqlalchemy/__init__.py:794: FSADeprecationWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning.
+  'SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and '
+[2019-01-10 02:30:54 +0000] [26219] [INFO] Handling signal: term
+[2019-01-10 02:30:54 +0000] [26494] [INFO] Worker exiting (pid: 26494)
+{u'id': 0}
+{u'id': 0}
+{u'id': 0}
+./gun.sh: 2: ./gun.sh: source: not found
+[2019-01-10 02:30:54 +0000] [26219] [INFO] Shutting down: Master
+[2019-01-10 02:30:55 +0000] [26508] [INFO] Starting gunicorn 19.9.0
+[2019-01-10 02:30:55 +0000] [26508] [INFO] Listening at: http://127.0.0.1:8000 (26508)
+[2019-01-10 02:30:55 +0000] [26508] [INFO] Using worker: sync
+[2019-01-10 02:30:55 +0000] [26512] [INFO] Booting worker with pid: 26512
+[2019-01-10 02:30:55 +0000] [26512] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 129, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 138, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ubuntu/git/dotter/app.py", line 8, in <module>
+    from flask_sqlalchemy import SQLAlchemy
+ImportError: No module named flask_sqlalchemy
+[2019-01-10 02:30:55 +0000] [26512] [INFO] Worker exiting (pid: 26512)
+[2019-01-10 02:30:55 +0000] [26508] [INFO] Shutting down: Master
+[2019-01-10 02:30:55 +0000] [26508] [INFO] Reason: Worker failed to boot.
+./gun.sh: 2: ./gun.sh: source: not found
+[2019-01-10 02:34:31 +0000] [26535] [INFO] Starting gunicorn 19.9.0
+[2019-01-10 02:34:31 +0000] [26535] [INFO] Listening at: http://127.0.0.1:8000 (26535)
+[2019-01-10 02:34:31 +0000] [26535] [INFO] Using worker: sync
+[2019-01-10 02:34:31 +0000] [26539] [INFO] Booting worker with pid: 26539
+[2019-01-10 02:34:31 +0000] [26539] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 129, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 138, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ubuntu/git/dotter/app.py", line 8, in <module>
+    from flask_sqlalchemy import SQLAlchemy
+ImportError: No module named flask_sqlalchemy
+[2019-01-10 02:34:31 +0000] [26539] [INFO] Worker exiting (pid: 26539)
+[2019-01-10 02:34:31 +0000] [26535] [INFO] Shutting down: Master
+[2019-01-10 02:34:31 +0000] [26535] [INFO] Reason: Worker failed to boot.
+./gun.sh: 2: ./gun.sh: source: not found
+[2019-01-10 02:35:10 +0000] [26556] [INFO] Starting gunicorn 19.9.0
+[2019-01-10 02:35:10 +0000] [26556] [INFO] Listening at: http://127.0.0.1:8000 (26556)
+[2019-01-10 02:35:10 +0000] [26556] [INFO] Using worker: sync
+[2019-01-10 02:35:10 +0000] [26560] [INFO] Booting worker with pid: 26560
+[2019-01-10 02:35:10 +0000] [26560] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 129, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 138, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ubuntu/git/dotter/app.py", line 8, in <module>
+    from flask_sqlalchemy import SQLAlchemy
+ImportError: No module named flask_sqlalchemy
+[2019-01-10 02:35:10 +0000] [26560] [INFO] Worker exiting (pid: 26560)
+[2019-01-10 02:35:10 +0000] [26556] [INFO] Shutting down: Master
+[2019-01-10 02:35:10 +0000] [26556] [INFO] Reason: Worker failed to boot.
+./gun.sh: 2: ./gun.sh: source: not found
+[2019-01-10 02:35:35 +0000] [26565] [INFO] Starting gunicorn 19.9.0
+[2019-01-10 02:35:35 +0000] [26565] [INFO] Listening at: http://127.0.0.1:8000 (26565)
+[2019-01-10 02:35:35 +0000] [26565] [INFO] Using worker: sync
+[2019-01-10 02:35:35 +0000] [26569] [INFO] Booting worker with pid: 26569
+[2019-01-10 02:35:35 +0000] [26569] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 129, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 138, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ubuntu/git/dotter/app.py", line 8, in <module>
+    from flask_sqlalchemy import SQLAlchemy
+ImportError: No module named flask_sqlalchemy
+[2019-01-10 02:35:35 +0000] [26569] [INFO] Worker exiting (pid: 26569)
+[2019-01-10 02:35:35 +0000] [26565] [INFO] Shutting down: Master
+[2019-01-10 02:35:35 +0000] [26565] [INFO] Reason: Worker failed to boot.
+./gun.sh: 2: ./gun.sh: source: not found
+[2019-01-10 02:37:07 +0000] [26585] [INFO] Starting gunicorn 19.9.0
+[2019-01-10 02:37:07 +0000] [26585] [INFO] Listening at: http://127.0.0.1:8000 (26585)
+[2019-01-10 02:37:07 +0000] [26585] [INFO] Using worker: sync
+[2019-01-10 02:37:07 +0000] [26589] [INFO] Booting worker with pid: 26589
+[2019-01-10 02:37:07 +0000] [26589] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 129, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 138, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ubuntu/git/dotter/app.py", line 8, in <module>
+    from flask_sqlalchemy import SQLAlchemy
+ImportError: No module named flask_sqlalchemy
+[2019-01-10 02:37:07 +0000] [26589] [INFO] Worker exiting (pid: 26589)
+[2019-01-10 02:37:07 +0000] [26585] [INFO] Shutting down: Master
+[2019-01-10 02:37:07 +0000] [26585] [INFO] Reason: Worker failed to boot.
+./gun.sh: 2: ./gun.sh: source: not found
+[2019-01-10 02:37:22 +0000] [26594] [INFO] Starting gunicorn 19.9.0
+[2019-01-10 02:37:22 +0000] [26594] [INFO] Listening at: http://127.0.0.1:8000 (26594)
+[2019-01-10 02:37:22 +0000] [26594] [INFO] Using worker: sync
+[2019-01-10 02:37:22 +0000] [26598] [INFO] Booting worker with pid: 26598
+[2019-01-10 02:37:22 +0000] [26598] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 129, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 138, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ubuntu/git/dotter/app.py", line 8, in <module>
+    from flask_sqlalchemy import SQLAlchemy
+ImportError: No module named flask_sqlalchemy
+[2019-01-10 02:37:22 +0000] [26598] [INFO] Worker exiting (pid: 26598)
+[2019-01-10 02:37:22 +0000] [26594] [INFO] Shutting down: Master
+[2019-01-10 02:37:22 +0000] [26594] [INFO] Reason: Worker failed to boot.
+./gun.sh: 2: ./gun.sh: source: not found
+[2019-01-10 23:17:11 +0000] [32595] [INFO] Starting gunicorn 19.9.0
+[2019-01-10 23:17:11 +0000] [32595] [INFO] Listening at: http://127.0.0.1:8000 (32595)
+[2019-01-10 23:17:11 +0000] [32595] [INFO] Using worker: sync
+[2019-01-10 23:17:11 +0000] [32599] [INFO] Booting worker with pid: 32599
+[2019-01-10 23:19:40 +0000] [32599] [INFO] Worker reloading: /home/ubuntu/git/dotter/models.py modified
+[2019-01-10 23:19:41 +0000] [32599] [INFO] Worker exiting (pid: 32599)
+[2019-01-10 23:19:41 +0000] [32622] [INFO] Booting worker with pid: 32622
+[2019-01-10 23:20:24 +0000] [32622] [INFO] Worker reloading: /home/ubuntu/git/dotter/models.py modified
+[2019-01-10 23:20:26 +0000] [32622] [INFO] Worker exiting (pid: 32622)
+[2019-01-10 23:20:26 +0000] [32642] [INFO] Booting worker with pid: 32642
+[2019-01-10 23:25:36 +0000] [32642] [INFO] Worker reloading: /home/ubuntu/git/dotter/models.py modified
+[2019-01-10 23:25:42 +0000] [32642] [INFO] Worker exiting (pid: 32642)
+[2019-01-10 23:25:42 +0000] [32690] [INFO] Booting worker with pid: 32690
+[2019-01-10 23:46:13 +0000] [32690] [INFO] Worker reloading: /home/ubuntu/git/dotter/models.py modified
+[2019-01-10 23:46:13 +0000] [32690] [INFO] Worker exiting (pid: 32690)
+[2019-01-10 23:46:13 +0000] [420] [INFO] Booting worker with pid: 420
+[2019-01-10 23:48:14 +0000] [420] [INFO] Worker reloading: /home/ubuntu/git/dotter/models.py modified
+[2019-01-10 23:48:29 +0000] [420] [INFO] Worker exiting (pid: 420)
+[2019-01-10 23:48:29 +0000] [425] [INFO] Booting worker with pid: 425
+[2019-01-10 23:48:29 +0000] [425] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 129, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 138, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ubuntu/git/dotter/app.py", line 36, in <module>
+    import models
+  File "/home/ubuntu/git/dotter/models.py", line 14, in <module>
+    class line(db.Model):
+  File "/home/ubuntu/git/dotter/models.py", line 24, in line
+    check     = db.Column(Boolean, unique=False, default=True)
+NameError: name 'Boolean' is not defined
+[2019-01-10 23:48:29 +0000] [425] [INFO] Worker exiting (pid: 425)
+[2019-01-10 23:48:29 +0000] [32595] [INFO] Shutting down: Master
+[2019-01-10 23:48:29 +0000] [32595] [INFO] Reason: Worker failed to boot.
+./gun.sh: 2: ./gun.sh: source: not found
+[2019-01-10 23:54:39 +0000] [476] [INFO] Starting gunicorn 19.9.0
+[2019-01-10 23:54:39 +0000] [476] [INFO] Listening at: http://127.0.0.1:8000 (476)
+[2019-01-10 23:54:39 +0000] [476] [INFO] Using worker: sync
+[2019-01-10 23:54:39 +0000] [480] [INFO] Booting worker with pid: 480
+[2019-01-10 23:59:00 +0000] [480] [INFO] Worker reloading: /home/ubuntu/git/dotter/config.py modified
+[2019-01-10 23:59:10 +0000] [480] [INFO] Worker exiting (pid: 480)
+[2019-01-10 23:59:10 +0000] [522] [INFO] Booting worker with pid: 522
+[2019-01-10 23:59:52 +0000] [476] [INFO] Handling signal: term
+[2019-01-10 23:59:52 +0000] [522] [INFO] Worker exiting (pid: 522)
+./gun.sh: 2: ./gun.sh: source: not found
+[2019-01-10 23:59:52 +0000] [476] [INFO] Shutting down: Master
+[2019-01-10 23:59:52 +0000] [551] [INFO] Starting gunicorn 19.9.0
+[2019-01-10 23:59:52 +0000] [551] [INFO] Listening at: http://127.0.0.1:8000 (551)
+[2019-01-10 23:59:52 +0000] [551] [INFO] Using worker: sync
+[2019-01-10 23:59:52 +0000] [555] [INFO] Booting worker with pid: 555
+[2019-01-11 00:02:06 +0000] [555] [INFO] Worker reloading: /home/ubuntu/git/dotter/models.py modified
+[2019-01-11 00:02:07 +0000] [555] [INFO] Worker exiting (pid: 555)
+[2019-01-11 00:02:07 +0000] [564] [INFO] Booting worker with pid: 564
+[2019-01-11 00:12:53 +0000] [564] [INFO] Worker reloading: /home/ubuntu/git/dotter/models.py modified
+[2019-01-11 00:12:53 +0000] [564] [INFO] Worker exiting (pid: 564)
+[2019-01-11 00:12:53 +0000] [664] [INFO] Booting worker with pid: 664
+[2019-01-11 00:13:15 +0000] [664] [INFO] Worker reloading: /home/ubuntu/git/dotter/models.py modified
+[2019-01-11 00:13:24 +0000] [664] [INFO] Worker exiting (pid: 664)
+[2019-01-11 00:13:24 +0000] [675] [INFO] Booting worker with pid: 675
+[2019-01-11 00:15:17 +0000] [675] [INFO] Worker reloading: /home/ubuntu/git/dotter/models.py modified
+[2019-01-11 00:15:24 +0000] [675] [INFO] Worker exiting (pid: 675)
+[2019-01-11 00:15:24 +0000] [696] [INFO] Booting worker with pid: 696
+[2019-01-11 00:15:52 +0000] [696] [INFO] Worker reloading: /home/ubuntu/git/dotter/models.py modified
+[2019-01-11 00:15:54 +0000] [696] [INFO] Worker exiting (pid: 696)
+[2019-01-11 00:15:54 +0000] [704] [INFO] Booting worker with pid: 704
+[2019-01-11 00:18:39 +0000] [704] [INFO] Worker reloading: /home/ubuntu/git/dotter/config.py modified
+[2019-01-11 00:18:40 +0000] [704] [INFO] Worker exiting (pid: 704)
+[2019-01-11 00:18:40 +0000] [765] [INFO] Booting worker with pid: 765
+[2019-01-11 00:18:43 +0000] [551] [INFO] Handling signal: term
+[2019-01-11 00:18:43 +0000] [765] [INFO] Worker exiting (pid: 765)
+./gun.sh: 2: ./gun.sh: source: not found
+[2019-01-11 00:18:43 +0000] [551] [INFO] Shutting down: Master
+[2019-01-11 00:18:43 +0000] [773] [INFO] Starting gunicorn 19.9.0
+[2019-01-11 00:18:43 +0000] [773] [INFO] Listening at: http://127.0.0.1:8000 (773)
+[2019-01-11 00:18:43 +0000] [773] [INFO] Using worker: sync
+[2019-01-11 00:18:43 +0000] [777] [INFO] Booting worker with pid: 777
+[2019-01-11 00:24:54 +0000] [777] [INFO] Worker reloading: /home/ubuntu/git/dotter/models.py modified
+[2019-01-11 00:25:05 +0000] [777] [INFO] Worker exiting (pid: 777)
+[2019-01-11 00:25:05 +0000] [864] [INFO] Booting worker with pid: 864
+[2019-01-11 02:37:51 +0000] [864] [INFO] Worker reloading: /home/ubuntu/git/dotter/models.py modified
+[2019-01-11 02:37:59 +0000] [864] [INFO] Worker exiting (pid: 864)
+[2019-01-11 02:37:59 +0000] [925] [INFO] Booting worker with pid: 925
+[2019-01-11 06:10:33 +0000] [925] [INFO] Worker reloading: /home/ubuntu/git/dotter/app.py modified
+[2019-01-11 06:10:48 +0000] [925] [INFO] Worker exiting (pid: 925)
+[2019-01-11 06:10:48 +0000] [1594] [INFO] Booting worker with pid: 1594
+[2019-01-11 06:10:48 +0000] [1594] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 129, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 138, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ubuntu/git/dotter/app.py", line 98, in <module>
+    @app.route("/lines_id", methods=["GET", "POST"])
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1250, in decorator
+    self.add_url_rule(rule, endpoint, f, **options)
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 66, in wrapper_func
+    return f(self, *args, **kwargs)
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1221, in add_url_rule
+    'existing endpoint function: %s' % endpoint)
+AssertionError: View function mapping is overwriting an existing endpoint function: get_lines_id
+[2019-01-11 06:10:48 +0000] [1594] [INFO] Worker exiting (pid: 1594)
+[2019-01-11 06:10:48 +0000] [773] [INFO] Shutting down: Master
+[2019-01-11 06:10:48 +0000] [773] [INFO] Reason: Worker failed to boot.
+./gun.sh: 2: ./gun.sh: source: not found
+[2019-01-11 06:34:44 +0000] [2388] [INFO] Starting gunicorn 19.9.0
+[2019-01-11 06:34:44 +0000] [2388] [INFO] Listening at: http://127.0.0.1:8000 (2388)
+[2019-01-11 06:34:44 +0000] [2388] [INFO] Using worker: sync
+[2019-01-11 06:34:44 +0000] [2392] [INFO] Booting worker with pid: 2392
+[2019-01-11 06:34:45 +0000] [2392] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 129, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 138, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ubuntu/git/dotter/app.py", line 102, in <module>
+    @app.route("/lines_id", methods=["GET", "POST"])
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1250, in decorator
+    self.add_url_rule(rule, endpoint, f, **options)
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 66, in wrapper_func
+    return f(self, *args, **kwargs)
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1221, in add_url_rule
+    'existing endpoint function: %s' % endpoint)
+AssertionError: View function mapping is overwriting an existing endpoint function: get_lines_id
+[2019-01-11 06:34:45 +0000] [2392] [INFO] Worker exiting (pid: 2392)
+[2019-01-11 06:34:45 +0000] [2388] [INFO] Shutting down: Master
+[2019-01-11 06:34:45 +0000] [2388] [INFO] Reason: Worker failed to boot.
+./gun.sh: 2: ./gun.sh: source: not found
+[2019-01-11 06:35:38 +0000] [2408] [INFO] Starting gunicorn 19.9.0
+[2019-01-11 06:35:38 +0000] [2408] [INFO] Listening at: http://127.0.0.1:8000 (2408)
+[2019-01-11 06:35:38 +0000] [2408] [INFO] Using worker: sync
+[2019-01-11 06:35:38 +0000] [2412] [INFO] Booting worker with pid: 2412
+[2019-01-11 06:35:53,354] ERROR in app: Exception on /get_books [GET]
+Traceback (most recent call last):
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/git/dotter/app.py", line 99, in get_books
+    books = db.books.query.all()
+AttributeError: 'SQLAlchemy' object has no attribute 'books'
+[2019-01-11 06:36:44,133] ERROR in app: Exception on /get_books [GET]
+Traceback (most recent call last):
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/git/dotter/app.py", line 99, in get_books
+    books = db.books.query.all()
+AttributeError: 'SQLAlchemy' object has no attribute 'books'
+[2019-01-11 06:36:59 +0000] [2412] [INFO] Worker reloading: /home/ubuntu/git/dotter/app.py modified
+[2019-01-11 06:37:03 +0000] [2412] [INFO] Worker exiting (pid: 2412)
+[2019-01-11 06:37:03 +0000] [2415] [INFO] Booting worker with pid: 2415
+[2019-01-11 06:37:04,252] ERROR in app: Exception on /get_books [GET]
+Traceback (most recent call last):
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/git/dotter/app.py", line 99, in get_books
+    books = db.books.query.all()
+AttributeError: 'SQLAlchemy' object has no attribute 'books'
+[2019-01-11 06:37:09 +0000] [2408] [INFO] Handling signal: term
+[2019-01-11 06:37:09 +0000] [2415] [INFO] Worker exiting (pid: 2415)
+[2019-01-11 06:37:09 +0000] [2408] [INFO] Shutting down: Master
+./gun.sh: 2: ./gun.sh: source: not found
+[2019-01-11 07:06:53 +0000] [2529] [INFO] Starting gunicorn 19.9.0
+[2019-01-11 07:06:53 +0000] [2529] [INFO] Listening at: http://127.0.0.1:8000 (2529)
+[2019-01-11 07:06:53 +0000] [2529] [INFO] Using worker: sync
+[2019-01-11 07:06:53 +0000] [2533] [INFO] Booting worker with pid: 2533
+[2019-01-11 07:16:35 +0000] [2533] [INFO] Worker reloading: /home/ubuntu/git/dotter/app.py modified
+[2019-01-11 07:16:39 +0000] [2533] [INFO] Worker exiting (pid: 2533)
+[2019-01-11 07:16:39 +0000] [2663] [INFO] Booting worker with pid: 2663
+[2019-01-11 07:16:47,006] ERROR in app: Exception on /lines [GET]
+Traceback (most recent call last):
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/git/dotter/app.py", line 50, in get_lines
+    days = [d.json for d in day.query.all]
+TypeError: 'instancemethod' object is not iterable
+[2019-01-11 07:17:22 +0000] [2663] [INFO] Worker reloading: /home/ubuntu/git/dotter/app.py modified
+[2019-01-11 07:17:24 +0000] [2663] [INFO] Worker exiting (pid: 2663)
+[2019-01-11 07:17:24 +0000] [2669] [INFO] Booting worker with pid: 2669
+[2019-01-11 07:17:24,612] ERROR in app: Exception on /lines [GET]
+Traceback (most recent call last):
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/git/dotter/app.py", line 88, in get_lines
+    days = [d.json for d in day.query.all]*2
+TypeError: 'instancemethod' object is not iterable
+[2019-01-11 07:17:25,856] ERROR in app: Exception on /lines [GET]
+Traceback (most recent call last):
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/git/dotter/app.py", line 88, in get_lines
+    days = [d.json for d in day.query.all]*2
+TypeError: 'instancemethod' object is not iterable
+[2019-01-11 07:17:57 +0000] [2669] [INFO] Worker reloading: /home/ubuntu/git/dotter/app.py modified
+[2019-01-11 07:17:59 +0000] [2669] [INFO] Worker exiting (pid: 2669)
+[2019-01-11 07:17:59 +0000] [2672] [INFO] Booting worker with pid: 2672
+[2019-01-11 07:18:00,143] ERROR in app: Exception on /lines [GET]
+Traceback (most recent call last):
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/git/dotter/app.py", line 88, in get_lines
+    days = [d.json for d in day.query.all]*2
+TypeError: 'instancemethod' object is not iterable
+[2019-01-11 07:18:13 +0000] [2529] [INFO] Handling signal: term
+[2019-01-11 07:18:13 +0000] [2672] [INFO] Worker exiting (pid: 2672)
+[2019-01-11 07:18:13 +0000] [2529] [INFO] Shutting down: Master
+./gun.sh: 2: ./gun.sh: source: not found
+[2019-01-11 08:56:02 +0000] [2925] [INFO] Starting gunicorn 19.9.0
+[2019-01-11 08:56:02 +0000] [2925] [INFO] Listening at: http://127.0.0.1:8000 (2925)
+[2019-01-11 08:56:02 +0000] [2925] [INFO] Using worker: sync
+[2019-01-11 08:56:02 +0000] [2929] [INFO] Booting worker with pid: 2929
+============= DAY1 ============= 
+[{'user_id': 1, 'text': u'the different possible points are', 'id': 1, 'day_id': 1, 'parent_id': 0, 'shape': 2, 'important': False, 'book_id': 1, 'date_complete': u'12/12/2018', 'date': u'12/12/2018', 'check': False}, {'user_id': 1, 'text': u'a box to indicate a task to finish', 'id': 2, 'day_id': 1, 'parent_id': 1, 'shape': 0, 'important': False, 'book_id': 1, 'date_complete': u'12/12/2018', 'date': u'12/12/2018', 'check': True}, {'user_id': 1, 'text': u'a solid dot to indicate a note', 'id': 3, 'day_id': 1, 'parent_id': 1, 'shape': 2, 'important': False, 'book_id': 1, 'date_complete': u'12/12/2018', 'date': u'12/12/2018', 'check': False}, {'user_id': 1, 'text': u'a circle to indicate a meeting', 'id': 4, 'day_id': 1, 'parent_id': 1, 'shape': 1, 'important': False, 'book_id': 1, 'date_complete': u'12/12/2018', 'date': u'12/12/2018', 'check': False}, {'user_id': 1, 'text': u'each line has a range of options when hovered over', 'id': 5, 'day_id': 1, 'parent_id': 0, 'shape': 2, 'important': False, 'book_id': 1, 'date_complete': u'12/12/2018', 'date': u'12/12/2018', 'check': False}, {'user_id': 1, 'text': u"the 'x' deletes the lines and everything below", 'id': 6, 'day_id': 1, 'parent_id': 5, 'shape': 2, 'important': False, 'book_id': 1, 'date_complete': u'12/12/2018', 'date': u'12/12/2018', 'check': False}, {'user_id': 1, 'text': u"the '!' adds an indicator to emphasize importance/whatever", 'id': 7, 'day_id': 1, 'parent_id': 5, 'shape': 2, 'important': True, 'book_id': 1, 'date_complete': u'12/12/2018', 'date': u'12/12/2018', 'check': False}, {'user_id': 1, 'text': u'the box/dot/circle indicate how the point should function', 'id': 8, 'day_id': 1, 'parent_id': 5, 'shape': 2, 'important': False, 'book_id': 1, 'date_complete': u'12/12/2018', 'date': u'12/12/2018', 'check': False}, {'user_id': 1, 'text': u'the boxes can be checked and unchecked', 'id': 9, 'day_id': 1, 'parent_id': 5, 'shape': 2, 'important': False, 'book_id': 1, 'date_complete': u'12/12/2018', 'date': u'12/12/2018', 'check': True}, {'user_id': 1, 'text': u'the arrow changes the point between box/dot/circle', 'id': 10, 'day_id': 1, 'parent_id': 5, 'shape': 2, 'important': False, 'book_id': 1, 'date_complete': u'12/12/2018', 'date': u'12/12/2018', 'check': False}, {'user_id': 1, 'text': u"the '+' adds a child line to the current point", 'id': 11, 'day_id': 1, 'parent_id': 5, 'shape': 2, 'important': False, 'book_id': 1, 'date_complete': u'12/12/2018', 'date': u'12/12/2018', 'check': False}, {'user_id': 1, 'text': u'settings are kept at the top and bottom of each page', 'id': 12, 'day_id': 1, 'parent_id': 0, 'shape': 2, 'important': False, 'book_id': 1, 'date_complete': u'12/12/2018', 'date': u'12/12/2018', 'check': False}]
+============= DAY2 ============= 
+[{'user_id': 1, 'text': u'functional UI interactions', 'id': 13, 'day_id': 2, 'parent_id': 0, 'shape': 0, 'important': False, 'book_id': 1, 'date_complete': u'12/12/2018', 'date': u'12/12/2018', 'check': True}, {'user_id': 1, 'text': u'naming for simple JavaScript functionality', 'id': 14, 'day_id': 2, 'parent_id': 13, 'shape': 0, 'important': False, 'book_id': 1, 'date_complete': u'12/12/2018', 'date': u'12/12/2018', 'check': True}, {'user_id': 1, 'text': u'make days collapsible', 'id': 15, 'day_id': 2, 'parent_id': 13, 'shape': 0, 'important': False, 'book_id': 1, 'date_complete': u'12/12/2018', 'date': u'12/12/2018', 'check': True}, {'user_id': 1, 'text': u'add landing page for login/displaying books', 'id': 16, 'day_id': 2, 'parent_id': 13, 'shape': 0, 'important': False, 'book_id': 1, 'date_complete': u'12/12/2018', 'date': u'12/12/2018', 'check': False}, {'user_id': 1, 'text': u'convert site to run on VPS', 'id': 17, 'day_id': 2, 'parent_id': 0, 'shape': 0, 'important': False, 'book_id': 1, 'date_complete': u'12/12/2018', 'date': u'12/12/2018', 'check': True}, {'user_id': 1, 'text': u'remove PHP to convert to Python/Flask', 'id': 18, 'day_id': 2, 'parent_id': 17, 'shape': 0, 'important': False, 'book_id': 1, 'date_complete': u'12/12/2018', 'date': u'12/12/2018', 'check': True}, {'user_id': 1, 'text': u'install nginx/Flask/etc.', 'id': 19, 'day_id': 2, 'parent_id': 17, 'shape': 0, 'important': False, 'book_id': 1, 'date_complete': u'12/12/2018', 'date': u'12/12/2018', 'check': True}, {'user_id': 1, 'text': u'build templates in Flask', 'id': 20, 'day_id': 2, 'parent_id': 17, 'shape': 0, 'important': False, 'book_id': 1, 'date_complete': u'12/12/2018', 'date': u'12/12/2018', 'check': True}, {'user_id': 1, 'text': u'establish Flask / JavaScript interactions', 'id': 21, 'day_id': 2, 'parent_id': 0, 'shape': 0, 'important': False, 'book_id': 1, 'date_complete': u'12/12/2018', 'date': u'12/12/2018', 'check': False}, {'user_id': 1, 'text': u'send JSON from flask', 'id': 22, 'day_id': 2, 'parent_id': 21, 'shape': 0, 'important': False, 'book_id': 1, 'date_complete': u'12/12/2018', 'date': u'12/12/2018', 'check': True}, {'user_id': 1, 'text': u'receive JSON in JavaScript', 'id': 23, 'day_id': 2, 'parent_id': 21, 'shape': 0, 'important': False, 'book_id': 1, 'date_complete': u'12/12/2018', 'date': u'12/12/2018', 'check': True}, {'user_id': 1, 'text': u'build html from JSON on client-side JavaScript', 'id': 24, 'day_id': 2, 'parent_id': 21, 'shape': 0, 'important': False, 'book_id': 1, 'date_complete': u'12/12/2018', 'date': u'12/12/2018', 'check': True}, {'user_id': 1, 'text': u'read JavaScript JSON on server-side in Flask', 'id': 25, 'day_id': 2, 'parent_id': 21, 'shape': 0, 'important': False, 'book_id': 1, 'date_complete': u'12/12/2018', 'date': u'12/12/2018', 'check': False}, {'user_id': 1, 'text': u'build Flask database system w/ mysql (or potentially other db management)', 'id': 26, 'day_id': 2, 'parent_id': 0, 'shape': 0, 'important': False, 'book_id': 1, 'date_complete': u'12/12/2018', 'date': u'12/12/2018', 'check': False}, {'user_id': 1, 'text': u'establish db layout', 'id': 27, 'day_id': 2, 'parent_id': 26, 'shape': 0, 'important': False, 'book_id': 1, 'date_complete': u'12/12/2018', 'date': u'12/12/2018', 'check': True}, {'user_id': 1, 'text': u'build Flask functions to read/write to db', 'id': 28, 'day_id': 2, 'parent_id': 26, 'shape': 0, 'important': False, 'book_id': 1, 'date_complete': u'12/12/2018', 'date': u'12/12/2018', 'check': True}, {'user_id': 1, 'text': u'read user data to send to JS on clientside', 'id': 29, 'day_id': 2, 'parent_id': 26, 'shape': 0, 'important': False, 'book_id': 1, 'date_complete': u'12/12/2018', 'date': u'12/12/2018', 'check': True}, {'user_id': 1, 'text': u'write to db from JSON on clientside', 'id': 30, 'day_id': 2, 'parent_id': 26, 'shape': 0, 'important': False, 'book_id': 1, 'date_complete': u'12/12/2018', 'date': u'12/12/2018', 'check': False}, {'user_id': 1, 'text': u'add user login', 'id': 31, 'day_id': 2, 'parent_id': 0, 'shape': 0, 'important': False, 'book_id': 1, 'date_complete': u'12/12/2018', 'date': u'12/12/2018', 'check': False}, {'user_id': 1, 'text': u'probably want limited users due to small VPS currently', 'id': 32, 'day_id': 2, 'parent_id': 31, 'shape': 2, 'important': False, 'book_id': 1, 'date_complete': u'12/12/2018', 'date': u'12/12/2018', 'check': False}, {'user_id': 1, 'text': u'may want to wait till fully functional to open up to outside users for testing', 'id': 33, 'day_id': 2, 'parent_id': 31, 'shape': 2, 'important': False, 'book_id': 1, 'date_complete': u'12/12/2018', 'date': u'12/12/2018', 'check': False}, {'user_id': 1, 'text': u'legitimize site', 'id': 34, 'day_id': 2, 'parent_id': 0, 'shape': 0, 'important': False, 'book_id': 1, 'date_complete': u'12/12/2018', 'date': u'12/12/2018', 'check': True}, {'user_id': 1, 'text': u'get domain name', 'id': 35, 'day_id': 2, 'parent_id': 34, 'shape': 0, 'important': False, 'book_id': 1, 'date_complete': u'12/12/2018', 'date': u'12/12/2018', 'check': True}, {'user_id': 1, 'text': u'dotter.app', 'id': 36, 'day_id': 2, 'parent_id': 34, 'shape': 2, 'important': False, 'book_id': 1, 'date_complete': u'12/12/2018', 'date': u'12/12/2018', 'check': False}, {'user_id': 1, 'text': u'make ssl certs work in nginx', 'id': 37, 'day_id': 2, 'parent_id': 34, 'shape': 0, 'important': False, 'book_id': 1, 'date_complete': u'12/12/2018', 'date': u'12/12/2018', 'check': True}]
+============= DAY1 ============= 
+[{'user_id': 1, 'text': u'the different possible points are', 'id': 1, 'day_id': 1, 'parent_id': 0, 'shape': 2, 'important': False, 'book_id': 1, 'date_complete': u'12/12/2018', 'date': u'12/12/2018', 'check': False}, {'user_id': 1, 'text': u'a box to indicate a task to finish', 'id': 2, 'day_id': 1, 'parent_id': 1, 'shape': 0, 'important': False, 'book_id': 1, 'date_complete': u'12/12/2018', 'date': u'12/12/2018', 'check': True}, {'user_id': 1, 'text': u'a solid dot to indicate a note', 'id': 3, 'day_id': 1, 'parent_id': 1, 'shape': 2, 'important': False, 'book_id': 1, 'date_complete': u'12/12/2018', 'date': u'12/12/2018', 'check': False}, {'user_id': 1, 'text': u'a circle to indicate a meeting', 'id': 4, 'day_id': 1, 'parent_id': 1, 'shape': 1, 'important': False, 'book_id': 1, 'date_complete': u'12/12/2018', 'date': u'12/12/2018', 'check': False}, {'user_id': 1, 'text': u'each line has a range of options when hovered over', 'id': 5, 'day_id': 1, 'parent_id': 0, 'shape': 2, 'important': False, 'book_id': 1, 'date_complete': u'12/12/2018', 'date': u'12/12/2018', 'check': False}, {'user_id': 1, 'text': u"the 'x' deletes the lines and everything below", 'id': 6, 'day_id': 1, 'parent_id': 5, 'shape': 2, 'important': False, 'book_id': 1, 'date_complete': u'12/12/2018', 'date': u'12/12/2018', 'check': False}, {'user_id': 1, 'text': u"the '!' adds an indicator to emphasize importance/whatever", 'id': 7, 'day_id': 1, 'parent_id': 5, 'shape': 2, 'important': True, 'book_id': 1, 'date_complete': u'12/12/2018', 'date': u'12/12/2018', 'check': False}, {'user_id': 1, 'text': u'the box/dot/circle indicate how the point should function', 'id': 8, 'day_id': 1, 'parent_id': 5, 'shape': 2, 'important': False, 'book_id': 1, 'date_complete': u'12/12/2018', 'date': u'12/12/2018', 'check': False}, {'user_id': 1, 'text': u'the boxes can be checked and unchecked', 'id': 9, 'day_id': 1, 'parent_id': 5, 'shape': 2, 'important': False, 'book_id': 1, 'date_complete': u'12/12/2018', 'date': u'12/12/2018', 'check': True}, {'user_id': 1, 'text': u'the arrow changes the point between box/dot/circle', 'id': 10, 'day_id': 1, 'parent_id': 5, 'shape': 2, 'important': False, 'book_id': 1, 'date_complete': u'12/12/2018', 'date': u'12/12/2018', 'check': False}, {'user_id': 1, 'text': u"the '+' adds a child line to the current point", 'id': 11, 'day_id': 1, 'parent_id': 5, 'shape': 2, 'important': False, 'book_id': 1, 'date_complete': u'12/12/2018', 'date': u'12/12/2018', 'check': False}, {'user_id': 1, 'text': u'settings are kept at the top and bottom of each page', 'id': 12, 'day_id': 1, 'parent_id': 0, 'shape': 2, 'important': False, 'book_id': 1, 'date_complete': u'12/12/2018', 'date': u'12/12/2018', 'check': False}]
+============= DAY2 ============= 
+[{'user_id': 1, 'text': u'functional UI interactions', 'id': 13, 'day_id': 2, 'parent_id': 0, 'shape': 0, 'important': False, 'book_id': 1, 'date_complete': u'12/12/2018', 'date': u'12/12/2018', 'check': True}, {'user_id': 1, 'text': u'naming for simple JavaScript functionality', 'id': 14, 'day_id': 2, 'parent_id': 13, 'shape': 0, 'important': False, 'book_id': 1, 'date_complete': u'12/12/2018', 'date': u'12/12/2018', 'check': True}, {'user_id': 1, 'text': u'make days collapsible', 'id': 15, 'day_id': 2, 'parent_id': 13, 'shape': 0, 'important': False, 'book_id': 1, 'date_complete': u'12/12/2018', 'date': u'12/12/2018', 'check': True}, {'user_id': 1, 'text': u'add landing page for login/displaying books', 'id': 16, 'day_id': 2, 'parent_id': 13, 'shape': 0, 'important': False, 'book_id': 1, 'date_complete': u'12/12/2018', 'date': u'12/12/2018', 'check': False}, {'user_id': 1, 'text': u'convert site to run on VPS', 'id': 17, 'day_id': 2, 'parent_id': 0, 'shape': 0, 'important': False, 'book_id': 1, 'date_complete': u'12/12/2018', 'date': u'12/12/2018', 'check': True}, {'user_id': 1, 'text': u'remove PHP to convert to Python/Flask', 'id': 18, 'day_id': 2, 'parent_id': 17, 'shape': 0, 'important': False, 'book_id': 1, 'date_complete': u'12/12/2018', 'date': u'12/12/2018', 'check': True}, {'user_id': 1, 'text': u'install nginx/Flask/etc.', 'id': 19, 'day_id': 2, 'parent_id': 17, 'shape': 0, 'important': False, 'book_id': 1, 'date_complete': u'12/12/2018', 'date': u'12/12/2018', 'check': True}, {'user_id': 1, 'text': u'build templates in Flask', 'id': 20, 'day_id': 2, 'parent_id': 17, 'shape': 0, 'important': False, 'book_id': 1, 'date_complete': u'12/12/2018', 'date': u'12/12/2018', 'check': True}, {'user_id': 1, 'text': u'establish Flask / JavaScript interactions', 'id': 21, 'day_id': 2, 'parent_id': 0, 'shape': 0, 'important': False, 'book_id': 1, 'date_complete': u'12/12/2018', 'date': u'12/12/2018', 'check': False}, {'user_id': 1, 'text': u'send JSON from flask', 'id': 22, 'day_id': 2, 'parent_id': 21, 'shape': 0, 'important': False, 'book_id': 1, 'date_complete': u'12/12/2018', 'date': u'12/12/2018', 'check': True}, {'user_id': 1, 'text': u'receive JSON in JavaScript', 'id': 23, 'day_id': 2, 'parent_id': 21, 'shape': 0, 'important': False, 'book_id': 1, 'date_complete': u'12/12/2018', 'date': u'12/12/2018', 'check': True}, {'user_id': 1, 'text': u'build html from JSON on client-side JavaScript', 'id': 24, 'day_id': 2, 'parent_id': 21, 'shape': 0, 'important': False, 'book_id': 1, 'date_complete': u'12/12/2018', 'date': u'12/12/2018', 'check': True}, {'user_id': 1, 'text': u'read JavaScript JSON on server-side in Flask', 'id': 25, 'day_id': 2, 'parent_id': 21, 'shape': 0, 'important': False, 'book_id': 1, 'date_complete': u'12/12/2018', 'date': u'12/12/2018', 'check': False}, {'user_id': 1, 'text': u'build Flask database system w/ mysql (or potentially other db management)', 'id': 26, 'day_id': 2, 'parent_id': 0, 'shape': 0, 'important': False, 'book_id': 1, 'date_complete': u'12/12/2018', 'date': u'12/12/2018', 'check': False}, {'user_id': 1, 'text': u'establish db layout', 'id': 27, 'day_id': 2, 'parent_id': 26, 'shape': 0, 'important': False, 'book_id': 1, 'date_complete': u'12/12/2018', 'date': u'12/12/2018', 'check': True}, {'user_id': 1, 'text': u'build Flask functions to read/write to db', 'id': 28, 'day_id': 2, 'parent_id': 26, 'shape': 0, 'important': False, 'book_id': 1, 'date_complete': u'12/12/2018', 'date': u'12/12/2018', 'check': True}, {'user_id': 1, 'text': u'read user data to send to JS on clientside', 'id': 29, 'day_id': 2, 'parent_id': 26, 'shape': 0, 'important': False, 'book_id': 1, 'date_complete': u'12/12/2018', 'date': u'12/12/2018', 'check': True}, {'user_id': 1, 'text': u'write to db from JSON on clientside', 'id': 30, 'day_id': 2, 'parent_id': 26, 'shape': 0, 'important': False, 'book_id': 1, 'date_complete': u'12/12/2018', 'date': u'12/12/2018', 'check': False}, {'user_id': 1, 'text': u'add user login', 'id': 31, 'day_id': 2, 'parent_id': 0, 'shape': 0, 'important': False, 'book_id': 1, 'date_complete': u'12/12/2018', 'date': u'12/12/2018', 'check': False}, {'user_id': 1, 'text': u'probably want limited users due to small VPS currently', 'id': 32, 'day_id': 2, 'parent_id': 31, 'shape': 2, 'important': False, 'book_id': 1, 'date_complete': u'12/12/2018', 'date': u'12/12/2018', 'check': False}, {'user_id': 1, 'text': u'may want to wait till fully functional to open up to outside users for testing', 'id': 33, 'day_id': 2, 'parent_id': 31, 'shape': 2, 'important': False, 'book_id': 1, 'date_complete': u'12/12/2018', 'date': u'12/12/2018', 'check': False}, {'user_id': 1, 'text': u'legitimize site', 'id': 34, 'day_id': 2, 'parent_id': 0, 'shape': 0, 'important': False, 'book_id': 1, 'date_complete': u'12/12/2018', 'date': u'12/12/2018', 'check': True}, {'user_id': 1, 'text': u'get domain name', 'id': 35, 'day_id': 2, 'parent_id': 34, 'shape': 0, 'important': False, 'book_id': 1, 'date_complete': u'12/12/2018', 'date': u'12/12/2018', 'check': True}, {'user_id': 1, 'text': u'dotter.app', 'id': 36, 'day_id': 2, 'parent_id': 34, 'shape': 2, 'important': False, 'book_id': 1, 'date_complete': u'12/12/2018', 'date': u'12/12/2018', 'check': False}, {'user_id': 1, 'text': u'make ssl certs work in n[2019-01-11 08:58:14 +0000] [2929] [INFO] Worker reloading: /home/ubuntu/git/dotter/app.py modified
+[2019-01-11 08:58:14 +0000] [2929] [INFO] Worker exiting (pid: 2929)
+ginx', 'id': 37, 'day_id': 2, 'parent_id': 34, 'shape': 0, 'important': False, 'book_id': 1, 'date_complete': u'12/12/2018', 'date': u'12/12/2018', 'check': True}]
+[2019-01-11 08:58:14 +0000] [2932] [INFO] Booting worker with pid: 2932
+[2019-01-11 09:13:19 +0000] [2925] [INFO] Handling signal: term
+[2019-01-11 09:13:19 +0000] [2932] [INFO] Worker exiting (pid: 2932)
+./gun.sh: 2: ./gun.sh: source: not found
+[2019-01-11 09:13:19 +0000] [2925] [INFO] Shutting down: Master
+[2019-01-11 09:13:19 +0000] [2944] [INFO] Starting gunicorn 19.9.0
+[2019-01-11 09:13:19 +0000] [2944] [INFO] Listening at: http://127.0.0.1:8000 (2944)
+[2019-01-11 09:13:19 +0000] [2944] [INFO] Using worker: sync
+[2019-01-11 09:13:19 +0000] [2948] [INFO] Booting worker with pid: 2948

@@ -69,7 +69,7 @@ function check_book() {
 
 function add_book() {
 	$.getJSON(
-		"lines",
+		"days",
 		function(data) {
 			
 			var today =  new Date();
@@ -78,21 +78,39 @@ function add_book() {
 			var d = today.getDate();
 			var day = days[ today.getDay() ];
 			var date = day + " (" + m + "/" + d + "/" + y + ")";
-			data.days.push({id:1, title:date, text:'&nbsp;'});
-			data.lines.push({});
-			var next = ''
-			for (var i = 0; i < data.days.length; ++i) {	
-				next += '<div class="day" id="day' + i +'">';
-				next += '  <div class="line title">';
-				next += '    <input type="checkbox" name="checkbox.day.' + i +'" id="checkbox.day.' + i +'" value="value">'
-                next += '    <label style="position: relative; z-index: 100;" for="checkbox.day.' + i +'" class="heavy" contenteditable="false">' + data.days[i].title + '</label>'
-				next += '    <div class="text" contenteditable="true" style="text-align: right; font-style: italic;">' + data.days[i].text + '</div>';
-				next += add_lines(data.lines[i], base_id='day' + i +'-0');
-				next += '    <div class="line adder" id="adder_line"></div>';
+			// data.days.push({id:1, title:date, quote:'&nbsp;'});
+			// data.lines.push({});
+			let next = ''
+			for (var i = 0; i < data.days.length; ++i) {
+				var label = data.days[i].id
+				next = ''
+				next += '<div class="day" id="day' + data.days[i].id +'">';
+				next += '  <div class="line title" id="day'+ data.days[i].id + '.content">';
+				next += '    <input type="checkbox" name="checkbox.day.' + data.days[i].id +'" id="checkbox.day.' + data.days[i].id +'" value="value">'
+                next += '    <label style="position: relative; z-index: 100;" for="checkbox.day.' + data.days[i].id +'" class="heavy" contenteditable="false">' + data.days[i].title + '</label>'
+				next += '    <div class="text" contenteditable="true" style="text-align: right; font-style: italic;">' + data.days[i].quote + '</div>';
 				next += '  </div>';
 				next += '<br></div>';
+				document.getElementById("days").innerHTML += next;
+				$.ajax({
+								type: "POST",
+								url: "/lines",
+								contentType: "application/json",
+								data: JSON.stringify({id: label}),
+								dataType: "json",
+								async: false,
+								success: function(response) {
+									let nxt = add_lines(response.lines, base_id='day' + label +'-0');
+									nxt += '    <div class="line adder" id="adder_line"></div>';
+									document.getElementById('day'+ label + '.content').innerHTML += nxt;
+								},
+								error: function(err) {
+									document.getElementById('day'+ label + '.content').innerHTML += 'problem reading db';
+									console.log(err);
+								}
+							});
 			}
-		    document.getElementById("days").innerHTML = next;
+
 		    $(document).ready(add_listeners);
 		}
 	);
@@ -100,53 +118,52 @@ function add_book() {
 
 function add_lines(lines, base_id=0) {
   var id = parseInt(base_id.split('-').slice(-1)[0])
-  var next = '';
-  
+  let nxt = '';
   for (var line in lines) {
 	  n_lines = base_id + '-' + lines[line].id;
 	  if (lines[line].parent_id === id) {
 	  var checked = 0;
 	  if (lines[line].check === true) {checked = 1;}
-	  next += '<div class="line" id="' + n_lines + '.line">';
-	  next += '    <svg id="' + n_lines + '" class="bullet" checked="' + checked + '" xmlns="http://www.w3.org/2000/svg" version="1.0"  viewBox="0 0 55 20" style="position: relative; top: 0; left: -1.5em; z-index: 100;">';
-	  next += '      <rect x="2.5" y="0" width="10" height="20" class="ex option click_box" id="' + n_lines + '.ex.box" />';
-	  next += '      <path d="M 5 6.5 l 5 5 M 10 6.5 l -5 5" class="ex option" id="' + n_lines + '.ex" />';
-	  next += '      ';
-	  next += '      <rect x="12.5" y="0" width="10" height="20" class="descriptor option click_box" id="' + n_lines + '.descriptor.box" fill="rgba(0, 0, 0, 0)" stroke="rgba(0, 0, 0, 0)" stroke-width="1"/>';
+	  nxt += '<div class="line" id="' + n_lines + '.line">';
+	  nxt += '    <svg id="' + n_lines + '" class="bullet" checked="' + checked + '" xmlns="http://www.w3.org/2000/svg" version="1.0"  viewBox="0 0 55 20" style="position: relative; top: 0; left: -1.5em; z-index: 100;">';
+	  nxt += '      <rect x="2.5" y="0" width="10" height="20" class="ex option click_box" id="' + n_lines + '.ex.box" />';
+	  nxt += '      <path d="M 5 6.5 l 5 5 M 10 6.5 l -5 5" class="ex option" id="' + n_lines + '.ex" />';
+	  nxt += '      ';
+	  nxt += '      <rect x="12.5" y="0" width="10" height="20" class="descriptor option click_box" id="' + n_lines + '.descriptor.box" fill="rgba(0, 0, 0, 0)" stroke="rgba(0, 0, 0, 0)" stroke-width="1"/>';
       if (lines[line].important === true) {
-	      next += '      <path d="M 15 2.5 l 0.5 7 l 4 0 l 0.5 -7 l -5 0 m 2.5 12.5 c -1.8 0, -2.0 -1.0, -2.0 -2.0 c 0 -1.8, 1.0 -2.0, 2.0 -2.0 c 1.8 0, 2.0 1.0, 2.0 2.0 c 0 1.8, -1.0 2.0, -2.0 2.0" style="visibility: visible; fill: #33f;" id="' + n_lines + '.descriptor" class="descriptor option" />';
+	      nxt += '      <path d="M 15 2.5 l 0.5 7 l 4 0 l 0.5 -7 l -5 0 m 2.5 12.5 c -1.8 0, -2.0 -1.0, -2.0 -2.0 c 0 -1.8, 1.0 -2.0, 2.0 -2.0 c 1.8 0, 2.0 1.0, 2.0 2.0 c 0 1.8, -1.0 2.0, -2.0 2.0" style="visibility: visible; fill: #33f;" id="' + n_lines + '.descriptor" class="descriptor option" />';
 	  }
 	  else {
-		  next += '      <path d="M 15 2.5 l 0.5 7 l 4 0 l 0.5 -7 l -5 0 m 2.5 12.5 c -1.8 0, -2.0 -1.0, -2.0 -2.0 c 0 -1.8, 1.0 -2.0, 2.0 -2.0 c 1.8 0, 2.0 1.0, 2.0 2.0 c 0 1.8, -1.0 2.0, -2.0 2.0" style="visibility: hidden; fill: rgba(0, 0, 0, 0.3);" id="' + n_lines + '.descriptor" class="descriptor option" />';
+		  nxt += '      <path d="M 15 2.5 l 0.5 7 l 4 0 l 0.5 -7 l -5 0 m 2.5 12.5 c -1.8 0, -2.0 -1.0, -2.0 -2.0 c 0 -1.8, 1.0 -2.0, 2.0 -2.0 c 1.8 0, 2.0 1.0, 2.0 2.0 c 0 1.8, -1.0 2.0, -2.0 2.0" style="visibility: hidden; fill: rgba(0, 0, 0, 0.3);" id="' + n_lines + '.descriptor" class="descriptor option" />';
 	      }
-	  next += '      ';
-	  next += '      <rect x="24" y="0" width="10" height="20" class="dot option click_box" id="' + n_lines + '.checkers.box" fill="rgba(0, 0, 0, 0)" stroke="rgba(0, 0, 0, 0)" stroke-width="1"/>';
-	  next += '      <path d="' + shapes[lines[line].shape] + '" fill="' + fills[lines[line].shape] + '" class="dot option" id="' + n_lines + '.checkers"/>';
+	  nxt += '      ';
+	  nxt += '      <rect x="24" y="0" width="10" height="20" class="dot option click_box" id="' + n_lines + '.checkers.box" fill="rgba(0, 0, 0, 0)" stroke="rgba(0, 0, 0, 0)" stroke-width="1"/>';
+	  nxt += '      <path d="' + shapes[lines[line].shape] + '" fill="' + fills[lines[line].shape] + '" class="dot option" id="' + n_lines + '.checkers"/>';
 	  if (lines[line].check === true) {
-	      next += '      <path d="' + checks[lines[line].shape] + '" style="visibility: visible; stroke: #33f; fill: ' + check_fills[lines[line].shape] + ';" class="check" id="' + n_lines + '.check" />';
+	      nxt += '      <path d="' + checks[lines[line].shape] + '" style="visibility: visible; stroke: #33f; fill: ' + check_fills[lines[line].shape] + ';" class="check" id="' + n_lines + '.check" />';
 	  }
 	  else {
-	      next += '      <path d="' + checks[lines[line].shape] + '" style="visibility: hidden; stroke: #33f; fill: ' + check_fills[lines[line].shape] + ';" class="check" id="' + n_lines + '.check" />';
+	      nxt += '      <path d="' + checks[lines[line].shape] + '" style="visibility: hidden; stroke: #33f; fill: ' + check_fills[lines[line].shape] + ';" class="check" id="' + n_lines + '.check" />';
 	  }
-	  next += '      <rect x="35.5" y="0" width="10" height="20" class="change option click_box" id="' + n_lines + '.change.box" fill="rgba(0, 0, 0, 0)" stroke="rgba(0, 0, 0, 0)" stroke-width="1"/>';
-	  next += '      <path d="M 40 14 C 44 10, 44 8, 40 4 m -2 4 l2 -4 l4 2" id="' + n_lines + '.change" class="change option" stroke="#333" stroke-width="0.4" fill="transparent"/>';
-	  next += '      <rect x="46.0" y="0" width="9" height="20" class="plus option click_box" id="' + n_lines + '.plus.box" />';
-	  next += '      <path d="M 48.5 9 l 5 0 m -2.5 -2.5 l 0 5" class="plus option" id="' + n_lines + '.plus" />';
-	  next += '    </svg>';
-	  next += '  <div class="text" contenteditable="true" style="position: relative; padding-left: 0; top: 0;">' + lines[line].text;
+	  nxt += '      <rect x="35.5" y="0" width="10" height="20" class="change option click_box" id="' + n_lines + '.change.box" fill="rgba(0, 0, 0, 0)" stroke="rgba(0, 0, 0, 0)" stroke-width="1"/>';
+	  nxt += '      <path d="M 40 14 C 44 10, 44 8, 40 4 m -2 4 l2 -4 l4 2" id="' + n_lines + '.change" class="change option" stroke="#333" stroke-width="0.4" fill="transparent"/>';
+	  nxt += '      <rect x="46.0" y="0" width="9" height="20" class="plus option click_box" id="' + n_lines + '.plus.box" />';
+	  nxt += '      <path d="M 48.5 9 l 5 0 m -2.5 -2.5 l 0 5" class="plus option" id="' + n_lines + '.plus" />';
+	  nxt += '    </svg>';
+	  nxt += '  <div class="text" contenteditable="true" style="position: relative; padding-left: 0; top: 0;">' + lines[line].text;
       for (var subs in lines) {
 		  if (lines[line].id === lines[subs].parent_id) {
-			  next += add_lines(lines, id=n_lines);
+			  nxt += add_lines(lines, id=n_lines);
 			  break;
 		  }
 	  }
 	  id = lines[line].parent_id;
-	  next += '  </div>';
-	  next += '</div>';
+	  nxt += '  </div>';
+	  nxt += '</div>';
 	  /// add_lines(lines, lines[i].id);
       }
   }
-  return next;
+  return nxt;
 }
 
 function add_listeners() {
@@ -174,7 +191,7 @@ function new_line(event) {
   event.stopPropagation();
   console.log('adding line');
   n_lines += 1
-  var next = '';
+  let next = '';
   next += '<div class="line" id="' + n_lines + '.line">';
   next += '    <svg id="' + n_lines + '" class="bullet" checked="0" xmlns="http://www.w3.org/2000/svg" version="1.0"  viewBox="0 0 55 20" style="position: relative; top: 0; left: -1.5em; z-index: 100;">';
   next += '      <rect x="2.5" y="0" width="10" height="20" class="ex option click_box" id="' + n_lines + '.ex.box" />';
@@ -214,7 +231,7 @@ function add_line(event) {
   }
   console.log('adding line');
   boss += "-" + number;
-  var next = '';
+  let next = '';
   next += '<div class="line" id="' + boss + '.line">';
   next += '    <svg id="' + boss + '" class="bullet" checked="0" xmlns="http://www.w3.org/2000/svg" version="1.0"  viewBox="0 0 55 20" style="position: relative; top: 0; left: -1.5em; z-index: 100;">';
   next += '      <rect x="2.5" y="0" width="10" height="20" class="ex option click_box" id="' + boss + '.ex.box" />';
