@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
 html {
   margin: 0;
   height: 100%;
@@ -28,6 +29,10 @@ body {
   justify-content: center;
   overflow: scroll;
   background-size: 1em 1em;
+  display: none;
+  background-color: #fff;
+  position: absolute;
+  z-index: 999;
 }
 
 .library {
@@ -38,6 +43,7 @@ body {
   display: -webkit-flex; /* Safari */
   -webkit-flex-wrap: wrap; /* Safari 6.1+ */
   display: flex;  
+  align-self: flex-start;
   flex-wrap: wrap;
   margin-top: auto;
   margin-bottom: auto;
@@ -54,11 +60,97 @@ body {
   border-bottom-left-radius: 0.1em;
   border: 0px;
   box-shadow: 0 0.1em 0.3em 0 rgba(0, 0, 0, 0.5);
-  margin: 0em 2em;
+  margin: 1em 2em;
+  position: relative;
+  cursor: pointer;
+}
+
+.card .notebook_button {
+  display: none;
+}
+.card:hover .notebook_button {
+  display: inherit;
+}
+.notebook_button {
+  width: 25%;
+  height: 0%;
+  padding-top: 25%; /* 1:1 Aspect Ratio */
+  border-radius: 50%;
+  position: absolute;
+  margin: auto;
+  box-shadow: 0 0.2em 0.4em 0 rgba(0, 0, 0, 0.2), 0 0.5em 1.5em 0 rgba(0, 0, 0, 0.19);
+  background-size: 1.5em 1.5em;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.card input {
+  display: inline-block !important;
+}
+
+.card label {
+  font-weight: normal;
+}
+
+.new {
+  top: 37.5%;
+  left: 37.5%;
+  background-color: #33f;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" version="1.0"  width="10" height="10" viewBox="0 0 10 10"><path d="M 2.5 5 L 7.5 5 M 5 2.5 L 5 7.5"  style="stroke: white; stroke-width: 1.5;" /></svg>');
+}
+
+.open {
+  top: 37.5%;
+  left: 37.5%;
+  background-color: #666;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" version="1.0"  width="10" height="10" viewBox="0 0 10 10"><path d="M 2.5 2.5 L 5 3 L 7.5 2.5 L 7.5 7.5 L 5 8 L 2.5 7.5 Z" stroke-linejoin="round"  style="fill: transparent; stroke: white; stroke-width: 1.5;" /></svg>');
+}
+.open:hover {
+  background-color: #777;
+}
+
+.delete {
+  top: -5%;
+  left: -3%;
+  background-color: #d22;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" version="1.0"  width="10" height="10" viewBox="0 0 10 10"><path d="M 3 3 L 7 7 M 3 7 L 7 3"  style="stroke: white; stroke-width: 1.5;" /></svg>');
+}
+.delete:hover {
+  background-color: #f33;
+}
+
+
+.settings {
+  bottom: -5%;
+  left: -3%;
+  background-color: #22d;
+  fill: transparent;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" version="1.0" width="10" height="10" viewBox="0 0 10 10"><defs><mask id="hole"><rect width="10" height="10" fill="white"/>circle r="1" cx="5" cy="5" fill="black"/></mask></defs><path d="M 7.97433458412 4.60842142334 L 7.97433458412 5.39157857666 L 7.17333310915 5.58234285148 L 6.59099025767 6.59099025767 L 6.82628428703 7.38006002087 L 6.1480502971 7.77163859753 L 5.58234285148 7.17333310915 L 4.41765714852 7.17333310915 L 3.8519497029 7.77163859753 L 3.17371571297 7.38006002087 L 3.40900974233 6.59099025767 L 2.82666689085 5.58234285148 L 2.02566541588 5.39157857666 L 2.02566541588 4.60842142334 L 2.82666689085 4.41765714852 L 3.40900974233 3.40900974233 L 3.17371571297 2.61993997913 L 3.8519497029 2.22836140247 L 4.41765714852 2.82666689085 L 5.58234285148 2.82666689085 L 6.1480502971 2.22836140247 L 6.82628428703 2.61993997913 L 6.59099025767 3.40900974233 L 7.17333310915 4.41765714852 L 7.97433458412 4.60842142334 Z" stroke-width="0.5" stroke="white" fill="white" mask="url(%23hole)"/></svg>');
+  z-index: 10;
+}
+
+  
+.settings:hover {
+  background-color: #33f;
+}
+  
+
+.keeper {
+  background-color: #246;
+  background-image: repeating-linear-gradient(rgba(255, 255 ,200), yellow 10px, green 100%);
+  background-repeat: no-repeat;
+  background-position: top;
+  width: 5%;
+  position: absolute;
+  height:100%;
+  bottom:0;
+  top:0;
+  left:80%;
+  z-index: 9;
+  box-shadow: 0 0.2em 0.4em 0 rgba(0, 0, 0, 0.2), 0 0.5em 1.5em 0 rgba(0, 0, 0, 0.19);
 }
 
 .card {
-  cursor: pointer;
   text-align: center;
   display: table;
   margin; 1em 1em;
@@ -85,36 +177,58 @@ body {
   page-break-before: always;
 }
 
+.logout {
+  cursor: pointer;
+  display: inline-block;
+  color: #000;
+}
+
+.logout:hover {
+  text-decoration: underline;
+}
+
 .login input {
   display: inline-block !important;
 }
 .login button {
   padding: 0.5em;
   text-align: center;
+  color: #fff;
+  background-color: #444;
+  border: 0;
+  font-weight: 500;
+  cursor: pointer;
 }
 .login label {
   font-weight: normal;
 }
 
 .header {
+  padding-left: 1em !important;
   padding: 0;
   margin: 0;
-  height: 1.2em;
+  height: 1.5em;
   position: absolute;
   top: -0.2em;
-  left: 1.2em;
+  left: 1.5em;
   width: 100%;
   vertical-align: middle;
+  font-size: 0.75em;
+  cursor: pointer;
 }
-
 
 .footer {
   padding: 0;
   margin: 0;
-  height: 1.2em;
+  height: 1.5em;
   position: absolute;
-  bottom: 0.3em;
-  left: 1.5em;
+  bottom: 0em;
+  left: 1.2em;
+  vertical-align: top;
+}
+#book_title {
+  display: inline;
+  font-weight: bold;
 }
 
 .colorbar {
@@ -166,11 +280,13 @@ body {
 .lining {
   font-size: 0.75em;
   float: left;
+  bottom: 0;
   cursor: pointer;
   padding: 0 1em;
-  padding-top: 0.125em;
+  margin-top: 0.2em;
   background-size: 0.5em 0.5em;
   background-repeat: repeat;
+  height: 100%;
 }
 
 .lining:hover {
@@ -193,8 +309,13 @@ body {
   padding: 0;
   margin: 0;
   height:100%;
-  overflow: scroll;
+  overflow-y: scroll;
   position: relative;
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  width: 100%;
+  left: 0px;
+  right: 20px;
 }
 .days {
   padding: 0;
@@ -219,19 +340,18 @@ body {
   z-index: 10;
   box-shadow: 0 0.2em 0.4em 0 rgba(0, 0, 0, 0.2), 0 0.5em 1.5em 0 rgba(0, 0, 0, 0.19);
 }
-.keeper {
-  background-color: #246;
-  background-image: repeating-linear-gradient(rgba(255, 255 ,200), yellow 10px, green 100%);
-  background-repeat: no-repeat;
-  background-position: top;
-  width: 5%;
-  position:relative;
-  height:100%;
-  bottom:0;
-  top:0;
-  left:80%;
-  z-index: 10;
-  box-shadow: 0 0.2em 0.4em 0 rgba(0, 0, 0, 0.2), 0 0.5em 1.5em 0 rgba(0, 0, 0, 0.19);
+
+.new_book {
+  background-color: transparent;
+  font-weight: 500;
+  border: 0;
+  text-align: center;
+  font-size: 1em;
+  height: 1.5em;
+  margin: 0em 0em;
+  line-height: 1.5em;
+  width: 100%;
+  
 }
 
 .dots {
@@ -244,7 +364,7 @@ body {
   background-size: 1.5em 1.5em;
 }
 
-.grids {
+.grid {
   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" version="1.0"  width="10" height="10" viewBox="0 0 10 10"><path d="M 0 8.5 l 10.0 0 M 9.5 0 l 0 10.0 " style="stroke: %23aaa; stroke-width: 0.15;" /></svg>');
   background-size: 1.5em 1.5em;
 }
@@ -254,12 +374,7 @@ body {
 }
 
 
-.day:hover {
-  box-shadow: inset 0 0 1px #f00;
-}
-
 .title {
-  background-image: url('heavy_dot.svg');
   background-repeat: repeat-x;
   background-position: left bottom;
   background-size: 1.5em 1.5em;
@@ -277,19 +392,20 @@ body {
 }
 
 .adder {
+  padding-left: 4em;
+  color: #aaa;
+  font-weight: bold;
   position: relative;
   cursor: pointer;
   left: -1.5em;
-  width: 100%;
-  visibility: hidden;
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" version="1.0"  width="35" height="20" viewBox="0 0 35 20">  <path d="M30 5 l 0 10 M25 10 l 10 0" stroke-width="1" stroke="%23333"/></svg>');
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" version="1.0"  width="35" height="20" viewBox="0 0 35 20">  <path d="M30 5 l 0 10 M25 10 l 10 0" stroke-width="2" stroke="%23aaa"/></svg>');
   background-size: 2.7em 1.5em;
   background-repeat: no-repeat;
 }
-.adder:hover {
-  cursor: pointer;
-  background-color: rgba(0, 0, 0, 0.15);
+.ladder {
+  visibility: hidden;
 }
+
 
 .day:hover .adder {
   visibility: visible;
@@ -299,11 +415,52 @@ body {
   margin: 0 0.3em;
   padding: 0 0;
   font-weight: bold;
+  font-size: 1em;
   height: auto;
   min-height: 1.5em;
   line-height: 1.5em; /* 4px +12px + 4px */
   vertical-align:middle; 
   float: left;
+  border: 0;
+  background-color: transparent;
+  max-width: 100%;
+}
+
+.collapse {
+  margin: 0 0;
+  padding: 0 0;
+  font-weight: bold;
+  font-size: 1em;
+  height: auto;
+  min-height: 1.5em;
+  line-height: 1.5em; /* 4px +12px + 4px */
+  vertical-align:middle; 
+  float: left;
+  border: 0;
+  background-color: transparent;
+  position: relative;
+  z-index: 100;
+}
+
+.delete_day {
+  visibility: hidden;
+  cursor: pointer;
+  width: 1.5em;
+  margin: 0 0;
+  padding: 0 0;
+  font-weight: bold;
+  font-size: 1em;
+  height: auto;
+  min-height: 1.5em;
+  line-height: 1.5em; /* 4px +12px + 4px */
+  vertical-align:middle; 
+  float: left;
+  border: 0;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" version="1.0"  width="10" height="10" viewBox="0 0 10 10"><path d="M 3 3 L 7 7 M 3 7 L 7 3"   style="stroke-width: 1.5; stroke: rgba(0, 0, 0, 0.3); fill: transparent;" /></svg>');
+  background-repeat: no-repeat;
+  background-size: 1.5em 1.5em;
+  position: relative;
+  z-index: 100;
 }
 
 .bullet {
@@ -326,12 +483,30 @@ body {
   position: relative;
   top: 0;
   left: 0;
+  display: block;
 }
 .text:hover {
-  background-color: rgba(0, 0, 0, 0.15);
+  background-color: rgba(0, 0, 0, 0.05);
 }
 .text:focus {
+  background-color: rgba(0, 0, 0, 0.025);
+}
+.quote {
+  background-color: none;
+  padding: 0;
+  padding-right: 0.3em;
+  border: 0;
+  width: auto;
+  position: relative;
+  top: 0;
+  left: 0;
+  display: block;
+}
+.quote:hover {
   background-color: rgba(0, 0, 0, 0.05);
+}
+.quote:focus {
+  background-color: rgba(0, 0, 0, 0.025);
 }
 
 
@@ -341,7 +516,7 @@ body {
 }
 
 .check {
-  stroke: rgb(45, 65, 205); 
+  stroke: #33f; 
   stroke-width:2.0;
   fill: none;
 }
@@ -350,8 +525,8 @@ body {
 }
 
 .click_box {
-  stroke: rgba(0, 0, 0, 0.01) !important;
-  fill:   rgba(0, 0, 0, 0.01) !important;
+  stroke: transparent !important;
+  fill:   transparent !important;
   visibility: hidden;
 }
 
@@ -385,6 +560,9 @@ label {
 }
 .day:hover input[type=checkbox]:checked + label {
   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" version="1.0"  viewBox="0 0 10 10"><path style="stroke-width: 2; stroke: %23000; fill: transparent;" d="M 2.5 5 L 5 7.5 L 7.5 5" /></svg>');
+}
+.day:hover .delete_day {
+  visibility: visible;
 }
 input[type=checkbox] ~ div {display: block;}
 input[type=checkbox]:checked ~ div {display: none;}

@@ -2,8 +2,8 @@
 {% block book %}
 
 <div class="bookmark" id="bookmark">
-    <div id="in" class="zoom">(+)</div>
-    <div id="out" class="zoom">(-)</div>
+<!--    <div id="in" class="zoom">(+)</div>  -->
+<!--    <div id="out" class="zoom">(-)</div> -->
 </div>
 
 <div class="book" id="journal">
@@ -16,16 +16,15 @@
     <rect x="62.5" y="5" width="15.0" height="15.0" class="black color"  />
   </svg>
 -->
-  <div class="linings">
-    <!-- <div class="title lining"><b>dotter</b>.app</div> --->
-    <div id="dotted" class="lining dotted" >dots</div>
-    <div id="gridded" class="lining gridded">grids</div>
-    <div id="lined" class="lining lined"  >lines</div>
-    <div id="empty" class="lining empty"  >empty</div>
-  </div>
+      <div id="book_title"></div>
+      {% if current_user.is_authenticated %}
+        ({{ current_user.username }})
+      {% else %}
+        (guest - no changes will be saved)
+      {% endif %}
 </div>
 <div class="page" id="daily">
-<div id="days" class="days grids">
+<div id="days" class="days dots">
 
 {% block days %}
 {% endblock %}
@@ -34,10 +33,70 @@
 </div>
 
 <div class="footer" id="footer">
+  <div class="linings">
+    <!-- <div class="title lining"><b>dotter</b>.app</div> --->
+    <div id="dotted" class="lining dotted" >dots</div>
+    <div id="gridded" class="lining gridded">grid</div>
+    <div id="lined" class="lining lined"  >lines</div>
+    <div id="empty" class="lining empty"  >empty</div>
+  </div>
 </div>
 
 
 </div>
+
+<div class="landing dots" style="display: block;">
+  <div class="library" id="library">
+    {% for b in books %}
+    <div class="card" id="book.{{ b.id }}">
+      <div class="notebook" title="{{ b.title }}" onclick="find_book({{ b.id }}, '{{ b.title }}'); event.stopPropagation()">
+        <div class="notebook_button open"></div>
+        {% if ((current_user.is_authenticated) and (b.user_id == current_user.id)) %}<div class="notebook_button delete" onclick="delete_book(event, {{ b.id }})"></div>{% endif %}
+        {% if ((current_user.is_authenticated) and (b.user_id == current_user.id)) %}<div class="notebook_button settings"></div>{% endif %}
+        <div class="keeper"></div>
+      </div>
+      <b>{{ b.title }}</b><br>(tflaspoehler)
+      <br><label><input class="public" type="checkbox" autocomplete="off" {% if b.public %}checked="checked"{% endif %} name="public" id="{{ b.id }}.public" {% if ((not current_user.is_authenticated) or (b.user_id != current_user.id)) %}onclick="return false;"{% endif %}>public</label>
+    </div>
+    {% endfor %}
+    
+    {% if current_user.is_authenticated %}
+    <div class="card" id="book.0">
+      <div class="notebook" title="new" onclick="new_book()">
+        <div class="notebook_button new"></div>
+        <div class="keeper"></div>
+      </div>
+      <input id="new_book" class="new_book" type="text" placeholder="new book title" name="book_name" autocomplete="off"><br>(create new)
+      <br><label><input type="checkbox" checked="checked" name="public" id="public" autocomplete="off">public</label>
+    </div>
+    {% endif %}
+    <div class="login">
+      {% if current_user.is_authenticated %}
+        <center>
+          <b>{{ current_user.username }}</b> <a href="logout" class="logout">(logout)</a>
+        </center>
+      {% else %}
+      <form id="login_form" action="{{ url_for('landing') }}" method="post" autocomplete="on">
+        <label for="uname">username</label>
+        <input type="text" placeholder="username" name="uname" required>
+
+        <br><label for="psw">password</label>
+        <input type="password" placeholder="password" name="psw" required>
+
+        <br><center>
+          <button type="submit" id="login">login</button>
+          <label><input type="checkbox" checked="checked" name="remember">remember</label>
+          {% if invalid %}
+          <div style="color: #f90;"><i>invalid password</i></div>
+          {% endif %}
+        </center>
+      </form>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
 <script src="{{ url_for('static',filename='notes.js') }}"></script>
+<script src="{{ url_for('static',filename='login.js') }}"></script>
 
 {% endblock %}

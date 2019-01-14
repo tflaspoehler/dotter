@@ -1447,3 +1447,455 @@ ginx', 'id': 37, 'day_id': 2, 'parent_id': 34, 'shape': 0, 'important': False, '
 [2019-01-11 09:13:19 +0000] [2944] [INFO] Listening at: http://127.0.0.1:8000 (2944)
 [2019-01-11 09:13:19 +0000] [2944] [INFO] Using worker: sync
 [2019-01-11 09:13:19 +0000] [2948] [INFO] Booting worker with pid: 2948
+[2019-01-11 17:48:35 +0000] [2944] [INFO] Handling signal: term
+[2019-01-11 17:48:35 +0000] [2948] [INFO] Worker exiting (pid: 2948)
+[2019-01-11 17:48:35 +0000] [2944] [INFO] Shutting down: Master
+./gun.sh: 2: ./gun.sh: source: not found
+[2019-01-12 05:22:35 +0000] [5911] [INFO] Starting gunicorn 19.9.0
+[2019-01-12 05:22:35 +0000] [5911] [INFO] Listening at: http://127.0.0.1:8000 (5911)
+[2019-01-12 05:22:35 +0000] [5911] [INFO] Using worker: sync
+[2019-01-12 05:22:35 +0000] [5915] [INFO] Booting worker with pid: 5915
+[2019-01-12 05:22:40 +0000] [5911] [INFO] Handling signal: hup
+[2019-01-12 05:22:40 +0000] [5911] [INFO] Hang up: Master
+[2019-01-12 05:22:40 +0000] [5919] [INFO] Booting worker with pid: 5919
+[2019-01-12 05:25:52,818] ERROR in app: Exception on /delete_book [POST]
+Traceback (most recent call last):
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/git/dotter/app.py", line 122, in delete_book
+    print current_user.is_authenticated, current_user.id,  book.query.filter_by(id=request.get_json()['id']).first().id
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2895, in first
+    ret = list(self[0:1])
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2687, in __getitem__
+    return list(res)
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2995, in __iter__
+    return self._execute_and_instances(context)
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 3018, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 948, in execute
+    return meth(self, multiparams, params)
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/sqlalchemy/sql/elements.py", line 269, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1060, in _execute_clauseelement
+    compiled_sql, distilled_params
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1200, in _execute_context
+    context)
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1413, in _handle_dbapi_exception
+    exc_info
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/sqlalchemy/util/compat.py", line 265, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1193, in _execute_context
+    context)
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/sqlalchemy/engine/default.py", line 509, in do_execute
+    cursor.execute(statement, parameters)
+InterfaceError: <unprintable InterfaceError object>
+[2019-01-12 17:38:34 +0000] [5919] [INFO] Worker exiting (pid: 5919)
+getting day 1
+deleting book {u'isTrusted': True}
+True 1 getting day 1
+getting day 1
+getting day 1
+getting day 1
+getting day 1
+getting day 1
+getting day 1
+getting day 1
+getting day 1
+getting day 1
+getting day 1
+getting day 1
+getting day 1
+getting day 1
+getting day 1
+./gun.sh: 2: ./gun.sh: source: not found
+[2019-01-12 17:38:34 +0000] [5911] [INFO] Handling signal: term
+[2019-01-12 17:38:35 +0000] [5911] [INFO] Shutting down: Master
+[2019-01-12 17:38:35 +0000] [7472] [INFO] Starting gunicorn 19.9.0
+[2019-01-12 17:38:35 +0000] [7472] [INFO] Listening at: http://127.0.0.1:8000 (7472)
+[2019-01-12 17:38:35 +0000] [7472] [INFO] Using worker: sync
+[2019-01-12 17:38:35 +0000] [7476] [INFO] Booting worker with pid: 7476
+[2019-01-12 17:38:35 +0000] [7476] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 129, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 138, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ubuntu/git/dotter/app.py", line 8, in <module>
+    from flask_sqlalchemy import SQLAlchemy
+ImportError: No module named flask_sqlalchemy
+[2019-01-12 17:38:35 +0000] [7476] [INFO] Worker exiting (pid: 7476)
+[2019-01-12 17:38:35 +0000] [7472] [INFO] Shutting down: Master
+[2019-01-12 17:38:35 +0000] [7472] [INFO] Reason: Worker failed to boot.
+./gun.sh: 2: ./gun.sh: source: not found
+[2019-01-12 17:38:58 +0000] [7495] [INFO] Starting gunicorn 19.9.0
+[2019-01-12 17:38:58 +0000] [7495] [INFO] Listening at: http://127.0.0.1:8000 (7495)
+[2019-01-12 17:38:58 +0000] [7495] [INFO] Using worker: sync
+[2019-01-12 17:38:58 +0000] [7499] [INFO] Booting worker with pid: 7499
+[2019-01-12 18:07:51 +0000] [7495] [INFO] Handling signal: term
+[2019-01-12 18:07:51 +0000] [7499] [INFO] Worker exiting (pid: 7499)
+getting day 1
+getting day 1
+getting day 1
+getting day 1
+getting day 1
+getting day 1
+getting day 1
+getting day 1
+getting day 1
+getting day 1
+getting day 1
+getting day 1
+getting day 1
+getting day 1
+getting day 1
+getting day 1
+getting day 1
+getting day 1
+getting day 1
+getting day 1
+getting day 1
+getting day 1
+getting day 1
+getting day 1
+getting day 1
+getting day 1
+getting day 1
+getting day 1
+getting day 1
+getting day 1
+getting day 1
+getting day 1
+getting day 1
+getting day 1
+getting day 1
+getting day 1
+getting day 1
+getting day 1
+getting day 1
+getting day 1
+./gun.sh: 2: ./gun.sh: source: not found
+[2019-01-12 18:07:51 +0000] [7495] [INFO] Shutting down: Master
+[2019-01-12 18:07:52 +0000] [7519] [INFO] Starting gunicorn 19.9.0
+[2019-01-12 18:07:52 +0000] [7519] [INFO] Listening at: http://127.0.0.1:8000 (7519)
+[2019-01-12 18:07:52 +0000] [7519] [INFO] Using worker: sync
+[2019-01-12 18:07:52 +0000] [7523] [INFO] Booting worker with pid: 7523
+[2019-01-12 20:49:29 +0000] [7519] [INFO] Handling signal: term
+[2019-01-12 20:49:29 +0000] [7523] [INFO] Worker exiting (pid: 7523)
+getting day 1
+./gun.sh: 2: ./gun.sh: source: not found
+[2019-01-12 20:49:29 +0000] [7519] [INFO] Shutting down: Master
+[2019-01-12 20:49:29 +0000] [7610] [INFO] Starting gunicorn 19.9.0
+[2019-01-12 20:49:29 +0000] [7610] [INFO] Listening at: http://127.0.0.1:8000 (7610)
+[2019-01-12 20:49:29 +0000] [7610] [INFO] Using worker: sync
+[2019-01-12 20:49:29 +0000] [7614] [INFO] Booting worker with pid: 7614
+[2019-01-12 21:09:36 +0000] [7610] [INFO] Handling signal: term
+[2019-01-12 21:09:36 +0000] [7614] [INFO] Worker exiting (pid: 7614)
+./gun.sh: 2: ./gun.sh: source: not found
+[2019-01-12 21:09:36 +0000] [7610] [INFO] Shutting down: Master
+[2019-01-12 21:09:36 +0000] [7638] [INFO] Starting gunicorn 19.9.0
+[2019-01-12 21:09:36 +0000] [7638] [INFO] Listening at: http://127.0.0.1:8000 (7638)
+[2019-01-12 21:09:36 +0000] [7638] [INFO] Using worker: sync
+[2019-01-12 21:09:36 +0000] [7642] [INFO] Booting worker with pid: 7642
+[2019-01-12 21:10:19 +0000] [7638] [INFO] Handling signal: term
+[2019-01-12 21:10:19 +0000] [7642] [INFO] Worker exiting (pid: 7642)
+./gun.sh: 2: ./gun.sh: source: not found
+[2019-01-12 21:10:19 +0000] [7638] [INFO] Shutting down: Master
+[2019-01-12 21:10:19 +0000] [7647] [INFO] Starting gunicorn 19.9.0
+[2019-01-12 21:10:19 +0000] [7647] [INFO] Listening at: http://127.0.0.1:8000 (7647)
+[2019-01-12 21:10:19 +0000] [7647] [INFO] Using worker: sync
+[2019-01-12 21:10:19 +0000] [7651] [INFO] Booting worker with pid: 7651
+[2019-01-12 21:10:50 +0000] [7647] [INFO] Handling signal: term
+[2019-01-12 21:10:50 +0000] [7651] [INFO] Worker exiting (pid: 7651)
+./gun.sh: 2: ./gun.sh: source: not found
+[2019-01-12 21:10:50 +0000] [7647] [INFO] Shutting down: Master
+[2019-01-12 21:10:50 +0000] [7656] [INFO] Starting gunicorn 19.9.0
+[2019-01-12 21:10:50 +0000] [7656] [INFO] Listening at: http://127.0.0.1:8000 (7656)
+[2019-01-12 21:10:50 +0000] [7656] [INFO] Using worker: sync
+[2019-01-12 21:10:50 +0000] [7660] [INFO] Booting worker with pid: 7660
+[2019-01-12 21:36:18 +0000] [7656] [INFO] Handling signal: term
+[2019-01-12 21:36:18 +0000] [7660] [INFO] Worker exiting (pid: 7660)
+True
+adding new book cookbook True True
+deleting book 2
+True 1 2
+False
+adding new book cookbook False False
+deleting book 2
+True 1 2
+True
+adding new book cookbook True True
+deleting book 2
+True 1 2
+False
+adding new book cookbook False False
+deleting book 2
+True 1 2
+False
+adding new book cookbook False False
+deleting book 2
+True 1 2
+False
+adding new book grocery list False False
+deleting book 2
+True 1 2
+getting day 1
+getting day 1
+getting day 1
+getting day 1
+getting day 1
+getting day 1
+True
+adding new book  True True
+deleting book 2
+True 1 2
+False
+adding new book implementation to-do list False False
+deleting book 2
+True 1 2
+getting day 1
+getting day 1
+getting day 1
+getting day 1
+False
+adding new book cookbook False False
+getting day 1
+getting day 1
+deleting book 2
+True 1 2
+getting day 1
+getting day 1
+getting day 1
+getting day 1
+./gun.sh: 2: ./gun.sh: source: not found
+[2019-01-12 21:36:18 +0000] [7656] [INFO] Shutting down: Master
+[2019-01-12 21:36:18 +0000] [7769] [INFO] Starting gunicorn 19.9.0
+[2019-01-12 21:36:18 +0000] [7769] [INFO] Listening at: http://127.0.0.1:8000 (7769)
+[2019-01-12 21:36:18 +0000] [7769] [INFO] Using worker: sync
+[2019-01-12 21:36:18 +0000] [7773] [INFO] Booting worker with pid: 7773
+[2019-01-12 21:36:47 +0000] [7769] [INFO] Handling signal: term
+[2019-01-12 21:36:47 +0000] [7773] [INFO] Worker exiting (pid: 7773)
+getting day 1
+./gun.sh: 2: ./gun.sh: source: not found
+[2019-01-12 21:36:47 +0000] [7769] [INFO] Shutting down: Master
+[2019-01-12 21:36:47 +0000] [7778] [INFO] Starting gunicorn 19.9.0
+[2019-01-12 21:36:47 +0000] [7778] [INFO] Listening at: http://127.0.0.1:8000 (7778)
+[2019-01-12 21:36:47 +0000] [7778] [INFO] Using worker: sync
+[2019-01-12 21:36:47 +0000] [7782] [INFO] Booting worker with pid: 7782
+[2019-01-12 22:05:32 +0000] [7778] [INFO] Handling signal: term
+[2019-01-12 22:05:32 +0000] [7782] [INFO] Worker exiting (pid: 7782)
+getting day 1
+getting day 1
+getting day 1
+False
+adding new book cookbook False False
+getting day 2
+getting day 2
+getting day 2
+getting day 2
+getting day 1
+getting day 1
+getting day 1
+getting day 1
+getting day 2
+getting day 1
+getting day 2
+getting day 1
+getting day 2
+getting day 1
+deleting book 2
+True 1 2
+getting day 1
+False
+adding new book dotter todo list False False
+getting day 1
+getting day 1
+deleting book 2
+True 1 2
+getting day 2
+getting day 1
+getting day 2
+getting day 2
+getting day 1
+getting day 2
+True
+adding new book  True True
+deleting book 3
+True 1 3
+False
+adding new book cookbook False False
+getting day 2
+getting day 2
+getting day 1
+getting day 2
+deleting book 3
+True 1 3
+getting day 1
+getting day 1
+getting day 1
+getting day 1
+getting day 1
+getting day 2
+getting day 2
+getting day 1
+getting day 2
+getting day 2
+./gun.sh: 2: ./gun.sh: source: not found
+[2019-01-12 22:05:32 +0000] [7778] [INFO] Shutting down: Master
+[2019-01-12 22:05:33 +0000] [7819] [INFO] Starting gunicorn 19.9.0
+[2019-01-12 22:05:33 +0000] [7819] [INFO] Listening at: http://127.0.0.1:8000 (7819)
+[2019-01-12 22:05:33 +0000] [7819] [INFO] Using worker: sync
+[2019-01-12 22:05:33 +0000] [7823] [INFO] Booting worker with pid: 7823
+[2019-01-12 22:16:09 +0000] [7819] [INFO] Handling signal: term
+[2019-01-12 22:16:09 +0000] [7823] [INFO] Worker exiting (pid: 7823)
+getting day 1
+getting day 1
+getting day 1
+getting day 1
+getting day 1
+getting day 1
+getting day 1
+getting day 1
+getting day 1
+getting day 1
+getting day 1
+getting day 1
+getting day 1
+getting day 1
+getting day 1
+getting day 1
+getting day 1
+getting day 1
+getting day 1
+getting day 2
+getting day 2
+getting day 1
+getting day 2
+getting day 1
+getting day 2
+getting day 1
+getting day 2
+./gun.sh: 2: ./gun.sh: source: not found
+[2019-01-12 22:16:09 +0000] [7819] [INFO] Shutting down: Master
+[2019-01-12 22:16:09 +0000] [7831] [INFO] Starting gunicorn 19.9.0
+[2019-01-12 22:16:09 +0000] [7831] [INFO] Listening at: http://127.0.0.1:8000 (7831)
+[2019-01-12 22:16:09 +0000] [7831] [INFO] Using worker: sync
+[2019-01-12 22:16:09 +0000] [7835] [INFO] Booting worker with pid: 7835
+[2019-01-13 04:02:38 +0000] [7831] [INFO] Handling signal: hup
+[2019-01-13 04:02:38 +0000] [7831] [INFO] Hang up: Master
+[2019-01-13 04:02:38 +0000] [7994] [INFO] Booting worker with pid: 7994
+[2019-01-13 22:33:29 +0000] [7994] [INFO] Worker reloading: /home/ubuntu/git/dotter/app.py modified
+[2019-01-13 22:33:31 +0000] [7994] [INFO] Worker exiting (pid: 7994)
+deleting book 3
+True 1 3
+deleting book 4
+True 1 4
+getting day 1
+getting day 2
+getting day 1
+getting day 2
+getting day 1
+getting day 2
+getting day 1
+getting day 1
+getting day 1
+getting day 1
+getting day 1
+False
+adding new book Cookbook False False
+deleting book 3
+True 1 3
+True
+adding new book Cookbook True True
+getting day 2
+getting day 1
+getting day 1
+getting day 2
+getting day 3
+getting day 3
+deleting book 3
+True 1 3
+getting day 1
+[2019-01-13 22:33:31 +0000] [14762] [INFO] Booting worker with pid: 14762
+[2019-01-13 22:37:58 +0000] [14762] [INFO] Worker reloading: /home/ubuntu/git/dotter/app.py modified
+[2019-01-13 22:38:02 +0000] [14762] [INFO] Worker exiting (pid: 14762)
+[2019-01-13 22:38:02 +0000] [14801] [INFO] Booting worker with pid: 14801
+[2019-01-13 22:38:02 +0000] [14801] [ERROR] invalid syntax (app.py, line 123)
+Traceback (most recent call last):
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 138, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ubuntu/git/dotter/app.py", line 123
+    d = day(title=d['title'], date=b.date, user_id=u.id, book_id=b.id))
+                                                                      ^
+SyntaxError: invalid syntax
+[2019-01-13 22:38:04 +0000] [14801] [INFO] Worker reloading: /home/ubuntu/git/dotter/app.py modified
+[2019-01-13 22:38:05 +0000] [14801] [INFO] Worker exiting (pid: 14801)
+[2019-01-13 22:38:05 +0000] [14803] [INFO] Booting worker with pid: 14803
+[2019-01-13 22:38:05 +0000] [14803] [ERROR] invalid syntax (app.py, line 123)
+Traceback (most recent call last):
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 138, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ubuntu/git/dotter/app.py", line 123
+    d = day(title=d['title'], date=b.date, user_id=u.id, book_id=b.id))
+                                                                      ^
+SyntaxError: invalid syntax
+[2019-01-13 22:41:05 +0000] [7831] [INFO] Handling signal: term
+[2019-01-13 22:41:05 +0000] [14803] [INFO] Worker exiting (pid: 14803)
+[2019-01-13 22:41:05 +0000] [7831] [INFO] Shutting down: Master
+./gun.sh: 2: ./gun.sh: source: not found
+[2019-01-13 22:41:06 +0000] [14823] [INFO] Starting gunicorn 19.9.0
+[2019-01-13 22:41:06 +0000] [14823] [INFO] Listening at: http://127.0.0.1:8000 (14823)
+[2019-01-13 22:41:06 +0000] [14823] [INFO] Using worker: sync
+[2019-01-13 22:41:06 +0000] [14827] [INFO] Booting worker with pid: 14827
+[2019-01-13 22:41:06 +0000] [14827] [ERROR] invalid syntax (app.py, line 123)
+Traceback (most recent call last):
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 138, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ubuntu/git/dotter/app.py", line 123
+    d = day(title=d['title'], date=b.date, user_id=u.id, book_id=b.id))
+                                                                      ^
+SyntaxError: invalid syntax
+[2019-01-13 22:41:17 +0000] [14823] [INFO] Handling signal: term
+[2019-01-13 22:41:17 +0000] [14827] [INFO] Worker exiting (pid: 14827)
+[2019-01-13 22:41:17 +0000] [14823] [INFO] Shutting down: Master
