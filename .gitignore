@@ -1,5 +1,7 @@
 nppBackup
 
 *.php
+*.pyc
+output
 nohup.out
 .env/
