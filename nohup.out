@@ -1899,3 +1899,328 @@ SyntaxError: invalid syntax
 [2019-01-13 22:41:17 +0000] [14823] [INFO] Handling signal: term
 [2019-01-13 22:41:17 +0000] [14827] [INFO] Worker exiting (pid: 14827)
 [2019-01-13 22:41:17 +0000] [14823] [INFO] Shutting down: Master
+./gun.sh: 2: ./gun.sh: source: not found
+[2019-01-17 11:05:16 +0000] [23290] [INFO] Starting gunicorn 19.9.0
+[2019-01-17 11:05:16 +0000] [23290] [INFO] Listening at: http://127.0.0.1:8000 (23290)
+[2019-01-17 11:05:16 +0000] [23290] [INFO] Using worker: sync
+[2019-01-17 11:05:16 +0000] [23295] [INFO] Booting worker with pid: 23295
+[2019-01-17 11:40:52,551] ERROR in app: Exception on /update_line [POST]
+Traceback (most recent call last):
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1816, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1831, in finalize_request
+    response = self.make_response(rv)
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1957, in make_response
+    'The view function did not return a valid response. The'
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+[2019-01-17 11:40:58,142] ERROR in app: Exception on /update_line [POST]
+Traceback (most recent call last):
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1816, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1831, in finalize_request
+    response = self.make_response(rv)
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1957, in make_response
+    'The view function did not return a valid response. The'
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+[2019-01-17 11:41:05,181] ERROR in app: Exception on /update_title [POST]
+Traceback (most recent call last):
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1816, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1831, in finalize_request
+    response = self.make_response(rv)
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1957, in make_response
+    'The view function did not return a valid response. The'
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+[2019-01-17 12:34:53,715] ERROR in app: Exception on /update_line [POST]
+Traceback (most recent call last):
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1816, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1831, in finalize_request
+    response = self.make_response(rv)
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1957, in make_response
+    'The view function did not return a valid response. The'
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+[2019-01-17 12:44:49 +0000] [23290] [INFO] Handling signal: term
+[2019-01-17 12:44:49 +0000] [23295] [INFO] Worker exiting (pid: 23295)
+getting day 5
+getting day 3
+getting day 5
+getting day 5
+getting day 5
+getting day 5
+getting day 4
+adding new line to day 5 line 0
+commited session
+161 <class 'models.line'>
+updating line: shampoo<br>
+adding new line to day 5 line 0
+commited session
+adding new line to day 5 line 0
+commited session
+deleting line 163
+162 <class 'models.line'>
+updating line: deodorant<br>
+5 groceries shopping stuff
+updating title: shopping stuff
+getting day 4
+getting day 3
+getting day 1
+getting day 2
+getting day 5
+getting day 5
+getting day 5
+{u'id': u'6', u'collapse': False}
+{u'id': u'6', u'collapse': True}
+{u'id': u'6', u'collapse': False}
+{u'id': u'6', u'collapse': True}
+getting day 5
+160 <class 'models.line'>
+updating line: make sure it's very clear what the importance of using the CDF and the integrated quantity is for mesh tallies<br>
+./gun.sh: 2: ./gun.sh: source: not found
+[2019-01-17 12:44:49 +0000] [23290] [INFO] Shutting down: Master
+[2019-01-17 12:44:49 +0000] [23374] [INFO] Starting gunicorn 19.9.0
+[2019-01-17 12:44:49 +0000] [23374] [INFO] Listening at: http://127.0.0.1:8000 (23374)
+[2019-01-17 12:44:49 +0000] [23374] [INFO] Using worker: sync
+[2019-01-17 12:44:49 +0000] [23378] [INFO] Booting worker with pid: 23378
+[2019-01-17 12:46:47,870] ERROR in app: Exception on /update_line [POST]
+Traceback (most recent call last):
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1816, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1831, in finalize_request
+    response = self.make_response(rv)
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1957, in make_response
+    'The view function did not return a valid response. The'
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+[2019-01-17 12:46:48,873] ERROR in app: Exception on /update_line [POST]
+Traceback (most recent call last):
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1816, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1831, in finalize_request
+    response = self.make_response(rv)
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1957, in make_response
+    'The view function did not return a valid response. The'
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+[2019-01-17 15:45:51,360] ERROR in app: Exception on /update_line [POST]
+Traceback (most recent call last):
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1816, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1831, in finalize_request
+    response = self.make_response(rv)
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1957, in make_response
+    'The view function did not return a valid response. The'
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+[2019-01-17 15:45:53,462] ERROR in app: Exception on /update_line [POST]
+Traceback (most recent call last):
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1816, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1831, in finalize_request
+    response = self.make_response(rv)
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1957, in make_response
+    'The view function did not return a valid response. The'
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+[2019-01-17 15:46:10,185] ERROR in app: Exception on /update_line [POST]
+Traceback (most recent call last):
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1816, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1831, in finalize_request
+    response = self.make_response(rv)
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1957, in make_response
+    'The view function did not return a valid response. The'
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+[2019-01-17 15:46:20,283] ERROR in app: Exception on /update_line [POST]
+Traceback (most recent call last):
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1816, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1831, in finalize_request
+    response = self.make_response(rv)
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1957, in make_response
+    'The view function did not return a valid response. The'
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+[2019-01-17 15:46:21,747] ERROR in app: Exception on /update_line [POST]
+Traceback (most recent call last):
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1816, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1831, in finalize_request
+    response = self.make_response(rv)
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1957, in make_response
+    'The view function did not return a valid response. The'
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+[2019-01-17 15:46:34,958] ERROR in app: Exception on /update_line [POST]
+Traceback (most recent call last):
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1816, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1831, in finalize_request
+    response = self.make_response(rv)
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1957, in make_response
+    'The view function did not return a valid response. The'
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+[2019-01-17 15:46:51,993] ERROR in app: Exception on /update_line [POST]
+Traceback (most recent call last):
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1816, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1831, in finalize_request
+    response = self.make_response(rv)
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1957, in make_response
+    'The view function did not return a valid response. The'
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+[2019-01-17 16:20:47,586] ERROR in app: Exception on /update_title [POST]
+Traceback (most recent call last):
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1816, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1831, in finalize_request
+    response = self.make_response(rv)
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1957, in make_response
+    'The view function did not return a valid response. The'
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+[2019-01-17 16:21:02,129] ERROR in app: Exception on /update_line [POST]
+Traceback (most recent call last):
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1816, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1831, in finalize_request
+    response = self.make_response(rv)
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1957, in make_response
+    'The view function did not return a valid response. The'
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+[2019-01-17 16:21:31,942] ERROR in app: Exception on /update_line [POST]
+Traceback (most recent call last):
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1816, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1831, in finalize_request
+    response = self.make_response(rv)
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1957, in make_response
+    'The view function did not return a valid response. The'
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+[2019-01-17 16:21:45,908] ERROR in app: Exception on /update_line [POST]
+Traceback (most recent call last):
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1816, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1831, in finalize_request
+    response = self.make_response(rv)
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1957, in make_response
+    'The view function did not return a valid response. The'
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+[2019-01-17 16:21:56,696] ERROR in app: Exception on /update_line [POST]
+Traceback (most recent call last):
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1816, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1831, in finalize_request
+    response = self.make_response(rv)
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1957, in make_response
+    'The view function did not return a valid response. The'
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+[2019-01-17 16:22:23,891] ERROR in app: Exception on /update_line [POST]
+Traceback (most recent call last):
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1816, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1831, in finalize_request
+    response = self.make_response(rv)
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1957, in make_response
+    'The view function did not return a valid response. The'
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+[2019-01-17 16:22:28,615] ERROR in app: Exception on /update_line [POST]
+Traceback (most recent call last):
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1816, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1831, in finalize_request
+    response = self.make_response(rv)
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1957, in make_response
+    'The view function did not return a valid response. The'
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+[2019-01-17 16:22:52,467] ERROR in app: Exception on /update_line [POST]
+Traceback (most recent call last):
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1816, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1831, in finalize_request
+    response = self.make_response(rv)
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1957, in make_response
+    'The view function did not return a valid response. The'
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+[2019-01-17 16:23:47,083] ERROR in app: Exception on /update_line [POST]
+Traceback (most recent call last):
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1816, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1831, in finalize_request
+    response = self.make_response(rv)
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1957, in make_response
+    'The view function did not return a valid response. The'
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+[2019-01-17 16:23:50,669] ERROR in app: Exception on /update_line [POST]
+Traceback (most recent call last):
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1816, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1831, in finalize_request
+    response = self.make_response(rv)
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1957, in make_response
+    'The view function did not return a valid response. The'
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+[2019-01-17 16:24:15,014] ERROR in app: Exception on /update_line [POST]
+Traceback (most recent call last):
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1816, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1831, in finalize_request
+    response = self.make_response(rv)
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1957, in make_response
+    'The view function did not return a valid response. The'
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+[2019-01-17 16:30:49,286] ERROR in app: Exception on /update_line [POST]
+Traceback (most recent call last):
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1816, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1831, in finalize_request
+    response = self.make_response(rv)
+  File "/home/ubuntu/git/dotter/.env/local/lib/python2.7/site-packages/flask/app.py", line 1957, in make_response
+    'The view function did not return a valid response. The'
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+[2019-01-17 17:55:27 +0000] [23374] [INFO] Handling signal: hup
+[2019-01-17 17:55:27 +0000] [23374] [INFO] Hang up: Master
+[2019-01-17 17:55:27 +0000] [23755] [INFO] Booting worker with pid: 23755

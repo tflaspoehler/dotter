@@ -1,3 +1,5 @@
 nppBackup
 
 *.php
+nohup.out
+.env/
